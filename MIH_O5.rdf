@@ -1,0 +1,2945 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:MIH_O="http://example.org/MIH_O#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://example.org/MIH_O/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://example.org/MIH_O/">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://example.org/MIH_O/사건">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/관계">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>관계</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/유형">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/주제">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>주제</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/단체">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>단체</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/장소">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/MIH_O/인물">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_문익환기록물">
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_사건">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/사건_문익환기록물"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/사건"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#">
+    <rdfs:label></rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/주제_문익환기록물">
+    <rdfs:label>주제 문익환기록물</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/주제"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_주제"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/관계_인물">
+    <rdfs:label>관계 인물</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/관계"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_관계"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_주제">
+    <rdfs:label>문익환기록물 주제</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/주제"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/주제_문익환기록물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/사건_단체">
+    <rdfs:label>사건 단체</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_인물">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_단체"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:label>단체 인물</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_단체">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/단체_단체"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:label>단체 단체</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_유형">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/유형_문익환기록물"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/유형"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/사건_인물">
+    <rdfs:label>사건_인물</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/사건"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_사건"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/사건_문익환기록물">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/문익환기록물_사건"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/사건"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_인물">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/인물_문익환기록물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/장소_인물">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_장소"/>
+    </owl:inverseOf>
+    <rdfs:label>장소_인물</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_문익환기록물">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_단체"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:label>Object property 1</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/부부관계">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/부부관계"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:label>부부관계</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/장소_문익환기록물">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_장소"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_사건">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/사건_단체"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/사건"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:label>단체 사건</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/장소_단체">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_장소"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:label>장소 단체</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_단체">
+    <rdfs:range rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:label>문익환기록물 단체</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_단체">
+    <rdfs:range rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/단체_인물"/>
+    <rdfs:label>인물 단체</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/단체_장소">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:label>단체 장소</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_관계">
+    <rdfs:label>인물 관계</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/관계"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/관계_인물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_부부관계">
+    <rdfs:label>인물 부부관계</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/사건_장소">
+    <rdfs:label>사건_장소</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/사건"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/MIH_O/장소_사건"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/유형_문익환기록물">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/문익환기록물_유형"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/유형"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_장소">
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/장소_인물"/>
+    <rdfs:label>인물_장소</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/장소"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/인물_사건">
+    <rdfs:label>인물_사건</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/사건"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/사건_인물"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/문익환기록물_장소">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/장소_문익환기록물"/>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/장소"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.org/MIH_O/장소_사건">
+    <rdfs:label>장소_사건</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/MIH_O/사건"/>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+    <owl:inverseOf rdf:resource="http://example.org/MIH_O/사건_장소"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/MIH_O/URL">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:label>URL</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/MIH_O/생산일">
+    <rdfs:label>생산일</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org/MIH_O/쪽수">
+    <rdfs:label>쪽수</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/구속된_남편을_위한_아내의_기도">
+    <문익환기록물_유형>
+      <유형 rdf:about="http://example.org/MIH_O/문서류">
+        <rdfs:label>문서류</rdfs:label>
+      </유형>
+    </문익환기록물_유형>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/첫번째구속">
+        <사건_장소>
+          <장소 rdf:about="http://example.org/MIH_O/전주교도소">
+            <rdfs:label>전주교도소</rdfs:label>
+            <장소_사건>
+              <사건 rdf:about="http://example.org/MIH_O/다섯번째구속">
+                <사건_장소>
+                  <장소 rdf:about="http://example.org/MIH_O/안양교도소">
+                    <rdfs:label>안양교도소</rdfs:label>
+                    <장소_사건>
+                      <사건 rdf:about="http://example.org/MIH_O/두번째구속">
+                        <사건_장소>
+                          <장소 rdf:about="http://example.org/MIH_O/서대문서울구치소">
+                            <rdfs:label>서대문서울구치소</rdfs:label>
+                            <장소_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+                          </장소>
+                        </사건_장소>
+                        <사건_인물>
+                          <인물 rdf:about="http://example.org/MIH_O/문익환">
+                            <직업>목사</직업>
+                            <설명>문익환은 1918년 민족교육과 독립운동의 중심지였던 만주 북간도 명동촌에서 태어났다. 명동학교, 은진중학교, 평양 숭실학교에 다녔으며 이후 도쿄의 일본신학교, 한국신학대학, 미국 프린스턴 신학교에서 신학을 공부하였다. 1955년부터 한빛교회 목사와 한국신학대학 교수로 일하였다. 1968년부터 신구교 공동 구약번역사업의 책임위원으로 성서를 쉽고 아름다운 우리말로 번역하였고 그 과정에서 자신도 시를 쓰기 시작했다. 그리고 1976년에 3.1 민주구국선언문을 쓰고 구속된 이후로 18년 동안 여섯 차례, 10년 3개월 동안 수감생활을 하였다. </설명>
+                            <생몰년도>19180601~19940118</생몰년도>
+                            <부부관계>
+                              <인물 rdf:about="http://example.org/MIH_O/박용길">
+                                <부부관계 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                <인물_단체>
+                                  <단체 rdf:about="http://example.org/MIH_O/한빛교회">
+                                    <다른이름>중앙교회</다른이름>
+                                    <rdfs:label>한빛교회</rdfs:label>
+                                  </단체>
+                                </인물_단체>
+                                <주요활동>2005 국민훈장 모란장, 2006 한겨레통일문화상</주요활동>
+                                <설명>문익환의 부인. 박두환과 현문경의 셋째딸. 한빛교회 장로</설명>
+                                <생몰년도>19191024~20110925</생몰년도>
+                                <인물_단체>
+                                  <단체 rdf:about="http://example.org/MIH_O/요코하마한인교회">
+                                    <단체_사건>
+                                      <사건 rdf:about="http://example.org/MIH_O/피난">
+                                        <rdfs:label>피난</rdfs:label>
+                                      </사건>
+                                    </단체_사건>
+                                    <단체_사건>
+                                      <사건 rdf:about="http://example.org/MIH_O/유엔군입대">
+                                        <rdfs:label>유엔군입대</rdfs:label>
+                                        <발생_연도>1950	</발생_연도>
+                                        <사건_장소>
+                                          <장소 rdf:about="http://example.org/MIH_O/판문점">
+                                            <rdfs:label>판문점</rdfs:label>
+                                          </장소>
+                                        </사건_장소>
+                                        <사건_장소>
+                                          <장소 rdf:about="http://example.org/MIH_O/일본">
+                                            <rdfs:label>일본</rdfs:label>
+                                          </장소>
+                                        </사건_장소>
+                                        <다른이름>6.25참전	</다른이름>
+                                        <설명>미국 프린스턴신학교 유학 중에 한국전쟁이 발발하여 피난 중인 가족을 건사하기 위해 유엔군 지원, 도쿄의 유엔극동사령부로 발령. 영어에 능통한 사람 둘을 선발하여 정전회담의 통역원으로 보내기로 했는데, 거기서 문익환과 정경모가 뽑힘. 미군 대상으로 한국어학교 교장으로 재직. 영문이름 Timothy Moon으로 활동함</설명>
+                                      </사건>
+                                    </단체_사건>
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+                                    <설명>문익환이 유엔군으로 도쿄에서 근무하고 있을 때 1952~1954년 박용길이 전도사 생활을 했던 교회. 문익환이 자신의 가족으로 일본 체류 비자를 신청하려고 했지만 여의치 않고 박용길의 전도사 비자로 입국할 수 있었다. 이 기간에 넷째 문성근을 출산한다.</설명>
+                                    <단체_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                                    <rdfs:label>요코하마한인교회</rdfs:label>
+                                  </단체>
+                                </인물_단체>
+                                <rdfs:label>박용길</rdfs:label>
+                              </인물>
+                            </부부관계>
+                            <다른이름>Timothy Moon</다른이름>
+                            <다른이름>늦봄</다른이름>
+                            <rdfs:label>문익환</rdfs:label>
+                          </인물>
+                        </사건_인물>
+                        <발생연도>19781013~19791214</발생연도>
+                        <설명>유신헌법 비민주성 폭로로 형집행정지가 취소되어 재수감. 15개월</설명>
+                        <rdfs:label>두번째구속</rdfs:label>
+                      </사건>
+                    </장소_사건>
+                  </장소>
+                </사건_장소>
+                <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                <설명>방북 후 국가보안법위반으로 19개월 수감</설명>
+                <rdfs:label>다섯번째구속</rdfs:label>
+              </사건>
+            </장소_사건>
+          </장소>
+        </사건_장소>
+        <사건_장소>
+          <장소 rdf:about="http://example.org/MIH_O/명동성당">
+            <장소_사건>
+              <사건 rdf:about="http://example.org/MIH_O/3.1민주구국선언">
+                <rdfs:label>3.1민주구국선언</rdfs:label>
+              </사건>
+            </장소_사건>
+            <rdfs:label>명동성당</rdfs:label>
+          </장소>
+        </사건_장소>
+        <설명>3.1 민주구국선언문을 작성한 것이 조사 중에 드러나 22개월 수감</설명>
+        <발생연도>19760302~19771231</발생연도>
+        <rdfs:label>첫번째구속</rdfs:label>
+      </사건>
+    </문익환기록물_사건>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/양심범가족협의회">
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <다른이름>양심수가족협의회</다른이름>
+        <다른이름>구속자가족협의회</다른이름>
+        <주요활동>석방운동</주요활동>
+        <단체_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+        <다른이름>구가협</다른이름>
+        <rdfs:label>구가협</rdfs:label>
+        <설명>이전명칭: 구가협. 1973년의 「남산 부활절 연합예배사건」직후로부터 시작되어 1970년대와 1980년대를 통해 민주화운동과 관련하여 고문받고 구속되거나 권리를 침해당한 노동자, 농민들을 포함하여 모든 억압받는 사람들이 의사를 표현할 수 있는 유일한 창구로 정기 집회였던 「목요기도회」가 있었다.&#xD;
+양심범가족협의회는 1976년 3.1민주구국선언을 계기로 재출범하였고 양심범이라는 말에 범죄자이 의미가 있다하여 양심수가족협의회라는 말로도 불렸다. 이후 민주화실천가족운동협의회(민가협)로 발전한다. 박용길이 1980년부터 85년까지 회장을 맡았다.</설명>
+        <존립기간>1976~1985</존립기간>
+      </단체>
+    </문익환기록물_단체>
+    <rdfs:label>구속된 남편을 위한 아내의 기도</rdfs:label>
+    <쪽수>2</쪽수>
+    <설명>민주구국선언 사건으로 처음 문익환이 구속되었을 박용길이 쓰고 읽은 기도문 &lt;아내의 기도&gt;18*26</설명>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/민주와자유">
+        <rdfs:label>민주와자유</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47724</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산일>19760519</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/두_양이_그려진_카드">
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <rdfs:label>두 양이 그려진 카드</rdfs:label>
+    <설명>며느리 박용길이 시어머니 김신묵의 일주기 기일을 앞두고 쓴 편지. &#xD;
+박용길과 김신묵은 둘 다 양띠라 두 양이 해를 바라보는 카드의 그림이 마음에 든다고 쓰여있음&#xD;
+큰아들 문익환은 방북 후 옥에 갇혀 어머니의 임종을 지키지 못했다. 시어머니의 전폭적인 지지와 도움으로 박용길은 아이들을 맡기고 여신도회 활동을 비롯한 사회활동을 활발하게 펼칠 수 있었다. 편지에서 말하는 종로 5가는 기독교회관, 충신동은 유가협 사무실을 말하는 것이다.</설명>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/여섯번째구속">
+        <설명>분신정국 장례위원장 활동으로 21개월 수감</설명>
+        <발생연도>19910606~19930306</발생연도>
+        <rdfs:label>여섯번째구속</rdfs:label>
+      </사건>
+    </문익환기록물_사건>
+    <문익환기록물_장소>
+      <장소 rdf:about="http://example.org/MIH_O/기독교회관">
+        <rdfs:label>기독교회관</rdfs:label>
+        <다른이름>인권위원회사무실</다른이름>
+        <다른이름>종로5가</다른이름>
+      </장소>
+    </문익환기록물_장소>
+    <문익환기록물_장소>
+      <장소 rdf:about="http://example.org/MIH_O/안동교도소">
+        <rdfs:label>안동교도소</rdfs:label>
+        <장소_사건 rdf:resource="http://example.org/MIH_O/여섯번째구속"/>
+      </장소>
+    </문익환기록물_장소>
+    <생산일>19910716</생산일>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/가족">
+        <주제_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/육아일기">
+            <문익환기록물_장소>
+              <장소 rdf:about="http://example.org/MIH_O/미국_프린스턴">
+                <rdfs:label>미국 프린스턴신학교</rdfs:label>
+              </장소>
+            </문익환기록물_장소>
+            <문익환기록물_단체>
+              <단체 rdf:about="http://example.org/MIH_O/프린스턴신학교">
+                <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                <단체_문익환기록물 rdf:resource="http://example.org/MIH_O/육아일기"/>
+                <설명>1차 유학 1949년. 1950 한국 전쟁 발발로 중단. 정전 후 2차 유학 1954년. 신학석사학위 받음</설명>
+                <단체_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+                <rdfs:label>프린스턴신학교</rdfs:label>
+              </단체>
+            </문익환기록물_단체>
+            <설명>박용길이 쓴 호근, 영금, 성근의 육아일기(셋째 의근의 육아일기는 없음) 호근, 영금의 육아일기는 남편 문익환이 미국 프린스턴에 유학간 날(1949.8.25)부터 시작한다. 성근의 육아일기는 쓰임.</설명>
+            <생산자>박용길</생산자>
+            <문익환기록물_유형>
+              <유형 rdf:about="http://example.org/MIH_O/박물류">
+                <rdfs:label>박물류</rdfs:label>
+              </유형>
+            </문익환기록물_유형>
+            <형태소재>일기장</형태소재>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+            <rdfs:label>육아일기</rdfs:label>
+          </문익환기록물>
+        </주제_문익환기록물>
+        <rdfs:label>가족</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <문익환기록물_유형>
+      <유형 rdf:about="http://example.org/MIH_O/서신류">
+        <rdfs:label>서신류</rdfs:label>
+      </유형>
+    </문익환기록물_유형>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47710</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/한신대_캠퍼스에_모여살던_가족들">
+    <문익환기록물_장소>
+      <장소 rdf:about="http://example.org/MIH_O/한신대캠퍼스">
+        <장소_인물>
+          <인물 rdf:about="http://example.org/MIH_O/문동환">
+            <rdfs:label>문동환</rdfs:label>
+            <주요활동>미국 신학 유학을 마치고 한신대 교수, 수도교회 목사를 지냈다. 형 문익환 목사보다 일찍 재야운동에 뛰어들었고 3.1민주구국선언으로 투옥되었다. 제13대 평화민주당 국회의원으로 활동했고 말년에는 미국 뉴저지주에서 활동하였다. 6·15 남북 공동선언을 지지하는 6. 15남북공동선언실현 재미동포협의회 공동의장을 맡는 등 통일 운동을 벌였다. </주요활동>
+            <생몰년도>19210505~20190309</생몰년도>
+            <다른이름>Stephen Moon</다른이름>
+            <직업>한신대학교 신학과 교수, 수도교회 목사, 제13대 국회의원(평화민주당 부총재), 6.15남북공동선언실현 재미동포협의회 공동의장</직업>
+            <설명>문재린, 김신묵의 2남으로 북간도 명동에서 출생. 문익환의 동생. 문혜림(Harriett Faye Pinchbeck)의 남편. </설명>
+          </인물>
+        </장소_인물>
+        <장소_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <장소_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <설명>"서울시내와 교통이 두절되다시피 한 수유리 산 속, 한국신학대학 캠퍼스 사택은 그가 아이들의 왕국을 만들어낸 하나의 동화 같은 세계였다. ... 그곳의 풍경을 김용옥은 이렇게 쓴다.  &#xD;
+'당시의 한신의 캠퍼스는 정말 아름다웠다. 학생들뿐만 아니라 교수 전원이 캠퍼스 안에서 같이 살았다. 조그마한 낮은 1~2층짜리 후생주택이 수유리 화계의 송림둔덕 위로 아름답게 배열되어 있었다. 한 집에 보통 학생들이 7~8명 같이 살았다.'" &#xD;
+&#xD;
+"이 학교 건물 앞 넓은 잔디밭과 숲을 지배하며 문성근이 이끄는 아이들의 공동체는 한신대 교직자 모두가 그리워하는 추억이 되었다... 수유리 공동체는 유구했고, 그 속에서 문익환은 훌쩍 50세의 나이를 넘겼다." (문익환 평전)&#xD;
+</설명>   <rdfs:label>한신대캠퍼스</rdfs:label>
+      </장소>
+    </문익환기록물_장소>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <문익환기록물_유형>
+      <유형 rdf:about="http://example.org/MIH_O/사진류">
+        <rdfs:label>사진류</rdfs:label>
+      </유형>
+    </문익환기록물_유형>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=37415</URL>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/한신대">
+        <rdfs:label>한신대</rdfs:label>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <단체_단체>
+          <단체 rdf:about="http://example.org/MIH_O/조선신학교">
+            <rdfs:label>조선신학교</rdfs:label>
+            <다른이름>한신대</다른이름>
+            <다른이름>한국신학대</다른이름>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+            <단체_인물>
+              <인물 rdf:about="http://example.org/MIH_O/김재준">
+                <주요활동>미국 프린스턴신학교 유학, 조선신학교 교장, 경동교회 설립, 한국신학대학 학장, 한국기독교장로회 총회장, 한신학원 이사장, 국민훈장 무궁화장	</주요활동>
+                <rdfs:label>김재준</rdfs:label>
+                <인물_관계>
+                  <관계 rdf:about="http://example.org/MIH_O/문익환의스승">
+                    <rdfs:label>문익환의스승</rdfs:label>
+                  </관계>
+                </인물_관계>
+                <다른이름>장공</다른이름>
+                <인물_문익환기록물>
+                  <문익환기록물 rdf:about="http://example.org/MIH_O/스승이시여_큰_스승이시여">
+                    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                    <rdfs:label>스승이시여 큰 스승이시여</rdfs:label>
+                    <문익환기록물_사건>
+                      <사건 rdf:about="http://example.org/MIH_O/네번째구속">
+                        <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                        <발생연도>19800523~19870708</발생연도>
+                        <설명>집회와 시위에 관한 법률 위반·선동죄로 14개월 수감</설명>
+                        <rdfs:label>네번째구속</rdfs:label>
+                      </사건>
+                    </문익환기록물_사건>
+                    <생산자>문익환</생산자>
+                    <생산일>19870210</생산일>
+                    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35153</URL>
+                    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/한빛교회"/>
+                    <문익환기록물_장소>
+                      <장소 rdf:about="http://example.org/MIH_O/청주교도소">
+                        <rdfs:label>청주교도소</rdfs:label>
+                        <장소_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+                      </장소>
+                    </문익환기록물_장소>
+                    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/김재준"/>
+                    <설명>스승이신 장공 김재준 목사님을 추모하는 장문의 조시.&#xD;
+&#xD;
+김재준 목사님의 사모님과 아들내외에게 보내는 위로의 편지, 한빛교회 설립 32주년에 보내는 축하의 메시지. 아내에게는 소련의 변화에 대한 생각를 보냄</설명>
+                  </문익환기록물>
+                </인물_문익환기록물>
+                <직업>신학 교수, 목사</직업>
+                <생몰년도>19010926~19870127</생몰년도>
+                <인물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+                <설명>문익환의 학문적 스승.&#xD;
+문익환은 일명 김재준 사단으로 불리기도 함. (문익환, 문동환, 안병무, 서남동 등) 문익환 목사가 &lt;큰 스승이시여&gt;라는 장문의 추모시를 씀. </설명>
+              </인물>
+            </단체_인물>
+            <단체_장소>
+              <장소 rdf:about="http://example.org/MIH_O/서울">
+                <rdfs:label>서울</rdfs:label>
+              </장소>
+            </단체_장소>
+            <설명>한국신학대(한신대)의 전신. 1947년 문익환과 문동환이 졸업함. 당시 박용길 및 아이들은 부모님과 함께 김천에 있었다. </설명>
+            <주요활동>1939 한국기독교장로회의 직영 대학으로 설립&#xD;
+1949 신학적 이견으로 장로회신학교 분리 개교&#xD;
+1951 한국신학대&#xD;
+1958 수유리 캠퍼스 엶&#xD;
+1980 종합대학으로 개편, 1981 오산캠퍼스로 학부 이전&#xD;
+1992 한신대</주요활동>
+            <단체_인물>
+              <인물 rdf:about="http://example.org/MIH_O/안병무">
+                <인물_관계>
+                  <관계 rdf:about="http://example.org/MIH_O/문익환의친우">
+                    <rdfs:label>문익환의친우</rdfs:label>
+                    <관계_인물>
+                      <인물 rdf:about="http://example.org/MIH_O/장준하">
+                        <rdfs:label>장준하</rdfs:label>
+                        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친우"/>
+                        <인물_단체>
+                          <단체 rdf:about="http://example.org/MIH_O/숭실중학교">
+                            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                            <발생연도>1935~1936</발생연도>
+                            <설명>대학 진학을 위해 은진중학교 4년제를 졸업하고 5년제인 숭실학교로 4학년 편입, 신사참배 거부로 동맹 퇴학. 광명중학으로 전학.  </설명>
+                            <단체_인물>
+                              <인물 rdf:about="http://example.org/MIH_O/윤동주">
+                                <인물_단체>
+                                  <단체 rdf:about="http://example.org/MIH_O/은진중학">
+                                    <설명>(이전)명동소학교→은진중학교→(이후) 숭실중학교 &#xD;
+은사 김재준 목사, 동생의 문동환의 동창 강원용&#xD;
+"당시 용정에는 기독교 계통의 은진(恩眞), 민족주의 계통의 대성(大成), 사회주의 계통의 동흥(東興), 친일계통의 광명(光明) 이렇게 네 학교가 있었다. 그 중 5년제 정규학교는 광명뿐이었다." (문익환 평전)</설명>
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/김재준"/>
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+                                    <단체_인물>
+                                      <인물 rdf:about="http://example.org/MIH_O/송몽규">
+                                        <생몰년도>19170928~19450307</생몰년도>
+                                        <인물_장소>
+                                          <장소 rdf:about="http://example.org/MIH_O/북간도_명동">
+                                            <설명>문익환의 고향</설명>
+                                            <rdfs:label>만주_북간도</rdfs:label>
+                                          </장소>
+                                        </인물_장소>
+                                        <인물_장소>
+                                          <장소 rdf:about="http://example.org/MIH_O/북간도_용정">
+                                            <rdfs:label>북간도 용정</rdfs:label>
+                                          </장소>
+                                        </인물_장소>
+                                        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친우"/>
+                                        <설명>명동소학교 5학년 때 윤동주와 송몽규가 문예지 『새 명동』 발간. 16세 때 동아일보 신춘문예에 콩트 당선. 문익환은 윤동주에게, 윤동주는 송몽규에게 글쓰는 재능에 대해 열등감을 가졌다고 회고. 송몽규의 조카 송우혜가 윤동주 평전을 씀. </설명>
+                                        <rdfs:label>송몽규</rdfs:label>
+                                        <인물_단체>
+                                          <단체 rdf:about="http://example.org/MIH_O/명동소학교">
+                                            <단체_인물>
+                                              <인물 rdf:about="http://example.org/MIH_O/문재린">
+                                                <rdfs:label>문재린</rdfs:label>
+                                                <인물_단체>
+                                                  <단체 rdf:about="http://example.org/MIH_O/황금동교회">
+                                                    <설명>1946년 월남한 문씨 일가가 거처가 정해지지 않아 불안정할 때 송창근 박사의 소개로 가게 된 김천의 교회. &#xD;
+"비록 지방의 조그만 소도시에 있었지만 크고 권위 있었다. 송창근 박사가 목회를 하고, 정대위 목사, 조선출 목사, 김정준 목사, 공덕귀 여사가 거쳐 가면서 북간도 명동만큼은 아니더라도 민족주의적 기독교의 거목들을 배출하는 상징적인 교회가 되었다. 문재린 목사는 그곳에서 남쪽의 양떼를 만나기 시작하면서 아직 교회의 울타리에 들어오지 못한 압도적 다수의 양떼들에게 헌신하고자했다."(문익환 평전)</설명>
+                                                    <단체_장소>
+                                                      <장소 rdf:about="http://example.org/MIH_O/김천">
+                                                        <장소_단체 rdf:resource="http://example.org/MIH_O/김천"/>
+                                                        <rdfs:label
+                                                        >김천</rdfs:label>
+                                                      </장소>
+                                                    </단체_장소>
+                                                    <rdfs:label
+                                                    >황금동교회</rdfs:label>
+                                                  </단체>
+                                                </인물_단체>
+                                                <인물_장소 rdf:resource="http://example.org/MIH_O/김천"/>
+                                                <직업>목사</직업>
+                                                <인물_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+                                                <인물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+                                                <설명>문익환의 아버지. 김신묵의 남편. 일제 강점기와 대한민국의 시인, 신학자, 목사.</설명>
+                                                <생몰년도>18960000~19851229</생몰년도>
+                                                <부부관계>
+                                                  <인물 rdf:about="http://example.org/MIH_O/김신묵">
+                                                    <rdfs:label
+                                                    >김신묵</rdfs:label>
+                                                    <생몰년도>18950429~19900918</생몰년도>
+                                                    <설명>문익환의 어머니, 민족운동가.&#xD;
+한빛교회를 개척하고 교회와 야학에서 여성지도자로 활약함.</설명>                <인물_문익환기록물>
+                                                      <문익환기록물 rdf:about="http://example.org/MIH_O/피난시절_문재린과_김신묵_사진">
+                                                        <rdfs:label
+                                                        >피난시절 문재린과 김신묵 사진</rdfs:label>
+                                                        <설명>문재린과 김신묵은 평생 고향 북간도를 그리워하며 통일을 꿈꿨다.</설명>
+                                                        <문익환기록물_주제>
+                                                          <주제 rdf:about="http://example.org/MIH_O/통일과평화">
+                                                            <rdfs:label
+                                                            >통일과평화</rdfs:label>
+                                                          </주제>
+                                                        </문익환기록물_주제>
+                                                        <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+                                                        <생산일>19500000	</생산일>
+                                                        <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+                                                        <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+                                                        <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+                                                      </문익환기록물>
+                                                    </인물_문익환기록물>
+                                                    <부부관계 rdf:resource="http://example.org/MIH_O/문재린"/>
+                                                  </인물>
+                                                </부부관계>
+                                                <다른이름>승아</다른이름>
+                                                <다른이름>CR Moon	</다른이름>
+                                                <인물_장소>
+                                                  <장소 rdf:about="http://example.org/MIH_O/제주">
+                                                    <rdfs:label
+                                                    >제주</rdfs:label>
+                                                  </장소>
+                                                </인물_장소>
+                                              </인물>
+                                            </단체_인물>
+                                            <주요활동>윤동주, 송몽규와 문예지 &lt;새명동&gt; 발간(5학년)</주요활동>
+                                            <단체_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+                                            <단체_인물 rdf:resource="http://example.org/MIH_O/송몽규"/>
+                                            <단체_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+                                            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                            <rdfs:label>명동소학교</rdfs:label>
+                                          </단체>
+                                        </인물_단체>
+                                        <다른이름>문해, 꿈별</다른이름>
+                                        <인물_단체 rdf:resource="http://example.org/MIH_O/은진중학"/>
+                                      </인물>
+                                    </단체_인물>
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                    <단체_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+                                    <rdfs:label>은진중학</rdfs:label>
+                                  </단체>
+                                </인물_단체>
+                                <설명>문익환의 친구, 어린시절 명동학교, 숭실학교 등에서 함께 수학함.&#xD;
+일제강점기 시인, 작가, 독립운동가. 문익환의 아버지 문재린 목사가 윤동주의 장례를 집례함</설명>
+                                <생몰년도>19171230~19450213</생몰년도>
+                                <인물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+                                <인물_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+                                <인물_단체>
+                                  <단체 rdf:about="http://example.org/MIH_O/광명중학">
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                    <단체_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+                                    <설명>평양 숭실학교에서 신사참배 거부로 동맹퇴학했으나 5학년 편입을 위해 다시 친일 계열의 광명중학교에 편입, 졸업함</설명>
+                                    <단체_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+                                    <rdfs:label>광명중학</rdfs:label>
+                                  </단체>
+                                </인물_단체>
+                                <직업>시인, 작가, 독립운동가</직업>
+                                <인물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                                <인물_장소>
+                                  <장소 rdf:about="http://example.org/MIH_O/평양">
+                                    <rdfs:label>평양</rdfs:label>
+                                  </장소>
+                                </인물_장소>
+                                <인물_단체 rdf:resource="http://example.org/MIH_O/명동소학교"/>
+                                <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친우"/>
+                                <rdfs:label>윤동주</rdfs:label>
+                              </인물>
+                            </단체_인물>
+                            <단체_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+                            <다른이름>평양 숭실</다른이름>
+                            <rdfs:label>숭실중학교</rdfs:label>
+                          </단체>
+                        </인물_단체>
+                        <생몰년도>1915100519750817</생몰년도>
+                        <인물_단체>
+                          <단체 rdf:about="http://example.org/MIH_O/도쿄일본신학교">
+                            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                            <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+                            <설명>5년제 광명학교 졸업 후, 아버지 문재린 목사는 지린(길림)사범대학을 권했으나 목회자의 꿈을 갖고 신학교 입학을 결심함. 이권찬 목사의 권유로 일본 신학교에 입학. 일본 유학 중에 아내 박용길을 만남</설명>
+                            <발생연도>1938~1943</발생연도>
+                            <단체_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                            <rdfs:label>도쿄일본신학교</rdfs:label>
+                          </단체>
+                        </인물_단체>
+                        <직업>독립운동가, 정치인, 종교인, 언론인</직업>
+                        <주요활동>김구 주석 비서, 한신대 졸업, &lt;사상계&gt; 창간, 국회의원, 건국훈장 애국장, 금관문화훈장</주요활동>
+                        <인물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+                        <설명>문익환의 동지이자 친구, 문동환의 동창. 독립운동가, 정치가, 종교인, 언론인, 사회운동가이다.&#xD;
+박정희 정권의 긴급조치 1호의 원인이라고 평가될 정도로 독재반대에 앞장섬.&#xD;
+장준하의 죽음으로 인하여 문익환은 '네가 못한일을 해주마' 하며 민주화 운동에 앞장서는 계기가 됨.</설명>
+                      </인물>
+                    </관계_인물>
+                    <관계_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+                    <관계_인물 rdf:resource="http://example.org/MIH_O/송몽규"/>
+                  </관계>
+                </인물_관계>
+                <설명>문익환의 친구, 교계 동료, 교수, 3.1 민주구국사건 교도소 동기이자 민주화 운동 동지.&#xD;
+'김대중내란음모사건' 당시 독일통 안병무를 통하여 '슈피겔'지에 부당함을 호소하는 인터뷰를 함. [김형수. 2018. 『문익환 평전』. 파주: 다산책방, p. 454]</설명>
+                <인물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+                <주요활동>은진중 졸업, 평신도 교회 설립(향린교회 모체), 하이델베르크대 신학박사, 한신대 교수, 3.1민주구국선언 사건으로 복역, 한국기독교장로회 통일연구위원히 위원장</주요활동>
+                <인물_관계>
+                  <관계 rdf:about="http://example.org/MIH_O/문익환의동료">
+                    <rdfs:label>문익환의동료</rdfs:label>
+                    <관계_인물>
+                      <인물 rdf:about="http://example.org/MIH_O/정경모">
+                        <인물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+                        <인물_사건>
+                          <사건 rdf:about="http://example.org/MIH_O/방북사건">
+                            <사건_인물>
+                              <인물 rdf:about="http://example.org/MIH_O/김일성">
+                                <설명>조선민주주의인민공화국 국가 원수, 주석. 1989년 1월 1일 신년사에서 남북정치협상을 제의하며 남쪽의 각 정당 당수와 사회단체 대표, 추기경 김수환, 민중·노동운동가 백기완, 목사 문익환을 평양으로 초청.&#xD;
+1989년 문익환 목사의 방북 당시 두 차례 회담을 가짐</설명>
+                                <생몰년도>19120415~19940708</생몰년도>
+                                <인물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+                                <인물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+                                <rdfs:label>김일성</rdfs:label>
+                              </인물>
+                            </사건_인물>
+                            <rdfs:label>방북사건</rdfs:label>
+                          </사건>
+                        </인물_사건>
+                        <인물_단체>
+                          <단체 rdf:about="http://example.org/MIH_O/유엔군">
+                            <단체_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                            <단체_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+                            <단체_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+                            <존립기간>1950~	</존립기간>
+                            <설명>유엔사령부(United Nations Command) : 1950년에 설립되어 한국 전쟁 당시 참전국들의 병력을 통솔하고, 한국 전쟁 이후 한반도에 주둔하고 있는 전투사령부. 1950년 가을, 문익환은 미국 프린스턴 신학교 유학중에 한국에 남아있는 가족이 걱정돼 유엔군에 입대했고 도쿄 유엔사령부로 발령받아 일했다. </설명>
+                            <단체_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+                            <단체_사건>
+                              <사건 rdf:about="http://example.org/MIH_O/정전회담">
+                                <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                <사건_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+                                <rdfs:label>정전회담</rdfs:label>
+                                <설명>전쟁 발발 후 유엔군에 자원입대하여 도쿄GHQ(유엔극동사령부)에 근무, 정전회담 통역. 이때 정경모와 만남</설명>
+                                <다른이름>휴전회담</다른이름>
+                              </사건>
+                            </단체_사건>
+                            <rdfs:label>유엔군</rdfs:label>
+                            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                          </단체>
+                        </인물_단체>
+                        <인물_사건>
+                          <사건 rdf:about="http://example.org/MIH_O/박용길방북">
+                            <사건_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+                            <발생연도>19950628~19950731</발생연도>
+                            <설명>김일성 1주기 조문을 위해 북한 방북. 판문점을 통해 귀환 후 4개월간 수감. 국제엠네스티 양심수로 인정. 전세계 600여 명의 인사들의 석방 탄원, 징역 2년, 집행유예 3년. </설명>
+                            <rdfs:label>박용길방북</rdfs:label>
+                          </사건>
+                        </인물_사건>
+                        <rdfs:label>정경모</rdfs:label>
+                        <인물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                        <생몰년도>19240711~20210216	</생몰년도>
+                        <인물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+                        <설명>문익환과 정전회담 통역관 시절을 같이 보냈으며  89년도에 함께 방북하였음&#xD;
+통일운동가이자 정치평론가, 저술가. &#xD;
+1970년 박정희 대통령의 독재에 반발하여 일본으로 망명, 한국의 민주화운동과 통일운동에 진력함..&#xD;
+1989년 문익환 목사와 평양 방문을 결행하여 북한의 조국평화통일위원회 허담 위원장과 함께 4·2공동성명을 발표함. 이는 2000년 6·15 남북 공동성명의 초석으로 평가받음.</설명>
+                        <직업>통일운동가, 정치평론가, 저술가	</직업>
+                      </인물>
+                    </관계_인물>
+                    <관계_인물>
+                      <인물 rdf:about="http://example.org/MIH_O/김대중">
+                        <생몰년도>19240106~20090818</생몰년도>
+                        <직업>제15대 대통령</직업>
+                        <설명>문익환의 민주화운동 동지, 1, 3차 투옥 동기. 1987년 제13대 대통령 선거 당시 문익환의 지지를 받음.&#xD;
+대한민국 제15대 대통령.</설명>     <인물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+                        <인물_문익환기록물>
+                          <문익환기록물 rdf:about="http://example.org/MIH_O/석방하라_민족의_양심들-일본에서_제작한_포스터">
+                            <rdfs:label>석방하라 민족의 양심들-일본에서 제작한 포스터</rdfs:label>
+                            <설명>3.1민주구국선언문 사건 당시 일본 시민단체에서 만든 포스터로 3.1 사건 관련자들의 사진과, 사형을 언도받고 복역중이던 김지하 시인의 그림이 실려있다. 배경에는 부인들이 한복을 입고 시위하는 사진이 있다. 통일의 집에 오랫동안 걸려있는 포스터이다.</설명>
+                            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+                            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+                            <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+                            <생산일>19760000	</생산일>
+                          </문익환기록물>
+                        </인물_문익환기록물>
+                        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+                        <인물_단체>
+                          <단체 rdf:about="http://example.org/MIH_O/민주통일민중운동연합">
+                            <주요활동>학원안정볍반대푸쟁위원회 활동， 인권문제와 개헌문제를 중심으로 한 반독재민주화투쟁， 반외세자주화투쟁， 민중생존권투쟁 퉁을 전개， 민족민주운동의 구심점 역할 수행.</주요활동>
+                            <설명>한국전쟁 이후 최초의 전국적 반합법 연합운동조직. 민주화와 민족통일올 과제로 하는 장의 재야정치운동단체. 민중노선 지향의 원칙. 초대의장은 문익환. 1985 년 2.12 총선 직후인 3월 29 일 민민협과 국민회의가 통합되어 결성 (1 차 통합)하였고, 1985년 9월 20일 2차 통합대회를 통해 민청련과 개신교 둥이 잠여하였다. '민주화운동과 민족통일운동은 하나' 라는 기본인식 위에서 노동자·농민·청년·언론 동 샤회 각 분야의 민주화 운동단체들이 총망라되어 결성했다. 1989 년 1월 전국민족민주운동연합(전민&#xD;
+련) 결성을 맞아 약 4년간의 활동을 마무리하고 발전적으로 해체하였다.</설명>
+                            <rdfs:label>민통련</rdfs:label>
+                            <단체_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+                            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                            <단체_문익환기록물>
+                              <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사초청_시국대강연회_포스터_액자">
+                                <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                                <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57190</URL>
+                                <생산일>19870914	</생산일>
+                                <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+                                <rdfs:label>문익환 목사초청 시국대강연회 포스터 액자</rdfs:label>
+                                <설명>문익환 목사의 포스터가 넣어져 있는 액자. 포스터에는 조국의 민주화와 선거혁명을 주제로 하는 강연회에 그가 초청된 것과 일시 및 장소를 알려주는 내용이 적혀 있음&#xD;
+</설명>                           <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/민주통일민중운동연합"/>
+                                <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+                                <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+                              </문익환기록물>
+                            </단체_문익환기록물>
+                          </단체>
+                        </인물_단체>
+                        <rdfs:label>김대중</rdfs:label>
+                      </인물>
+                    </관계_인물>
+                    <관계_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+                  </관계>
+                </인물_관계>
+                <인물_단체 rdf:resource="http://example.org/MIH_O/은진중학"/>
+                <인물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+                <rdfs:label>안병무</rdfs:label>
+                <직업>신학교수</직업>
+              </인물>
+            </단체_인물>
+            <존립기간>1939~</존립기간>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <단체_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+          </단체>
+        </단체_단체>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/안병무"/>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/김재준"/>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+        <설명>문익환, 문동환이 월남 후 졸업한 조선신학교 의 후신. 개신교 장로회 교단인 한국기독교장로회의 신학교이며 문익환과 문동환이 교수로 재직할 때 수유리 캠퍼스 사택에서 생활했다. 문익환, 박용길, 문동환의 장례식이 치러진 곳.</설명>
+        <단체_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+        <존립기간>1939 한국기독교장로회의 직영 대학으로 조선대학교 설립&#xD;
+1949 신학적 이견으로 장로회신학교 분리 개교&#xD;
+1951 한국신학대&#xD;
+1958 수유리 캠퍼스 엶&#xD;
+1980 종합대학으로 개편, 1981 오산캠퍼스로 학부 이전&#xD;
+1992 한신대</존립기간>
+      </단체>
+    </문익환기록물_단체>
+    <생산일>1960년대</생산일>
+    <설명>문익환, 문동환이 교수로 있으면서 한신대 캠퍼스에 모여살던 가족들. 1960년대</설명>
+    <rdfs:label>한신대 캠퍼스에 모여살던 가족들</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/감옥에서_받은_매듭_십자가">
+    <생산일>19800000</생산일>
+    <rdfs:label>감옥에서 받은 매듭 십자가</rdfs:label>
+    <설명>함께 수감되어 있던 학생들이 문익환에게 선물한 매듭 십자가로 수건의 실을 빼내 만들었다.</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/소포_세관신고서">
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/프린스턴신학교"/>
+    <설명>유학중인 미국에서 문익환이 가족에게 보낸 소포. 옷, 타올, 크레용, 장난감, 얼굴 파우더, 펜, 안전핀의 수량과 가격이 적혀있다. United States Customs Declaration. 돈암동의 아버지 문재린(아호 문승아)앞으로 보냈다.</설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <발신주소>미국 프린스턴</발신주소>
+    <수신자>문재린</수신자>
+    <rdfs:label>소포 세관신고서</rdfs:label>
+    <생산일>19490922</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+    <수신주소>서울 돈암동</수신주소>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/발신주소">
+    <rdfs:label>발신주소</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/장소"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_방북_재판때_수갑차고_이동하는_사진">
+    <rdfs:label>문익환 방북 재판때 수갑차고 이동하는 사진</rdfs:label>
+    <설명>방북사건으로 기소되어 첫 공판을 받기위해 나오는 문익환&#xD;
+1989년 7월</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36258	</URL>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사의_시_덤을_보고_박용길_장로가_쓴_붓글씨">
+    <생산자>박용길</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>문익환 목사의 시 덤을 보고 박용길 장로가 쓴 붓글씨. 진달래꽃에 빗대어 누군가의 노래가 봄비처럼 내린다는 글귀가 적혀 있음</설명>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/달님과코스모스">
+        <rdfs:label>달님과코스모스의사랑</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57181</URL>
+    <rdfs:label>문익환 목사의 시 '덤'을 보고 박용길 장로가 마지막 연을 쓴 붓글씨&#xD;
+(‘쉰까지만 살았으면’&#xD;
+하던 폐병 들린 허약한 소원이&#xD;
+꺾일 듯 꺾일 듯하다&#xD;
+지나치기 이미 4년,&#xD;
+365일을 네 곱 해서 1460일&#xD;
+그 하루하루를 나는&#xD;
+덤으로 살았다. (후략)) 첫째시집 &lt;새삼스런 하루(1973)&gt;에 수록</rdfs:label>
+    <문익환기록물_유형>
+      <유형 rdf:about="http://example.org/MIH_O/서화류">
+        <rdfs:label>서화류</rdfs:label>
+      </유형>
+    </문익환기록물_유형>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산일>1973이전</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/조카_강영규가_그린_문익환_목사_캔버스">
+    <rdfs:label>조카 강영규가 그린 문익환 목사 캔버스</rdfs:label>
+    <생산자>강영규</생산자>
+    <설명>문익환 목사의 상반신 그림이 들어가 있는 캔버스. 문익환 목사가 어두운 밤을 배경으로 내려다 보고 있는 장면이 그려져 있음. 캐나다에 사는 조카 강영규 그림</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57198</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/새가정사">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>새가정사</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/코스모스_자수_책갈피">
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47756</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+    <형태소재>직물	</형태소재>
+    <생산일>19491225</생산일>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/프린스턴신학교"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <rdfs:label>코스모스 자수 책갈피</rdfs:label>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/주요활동">
+    <rdfs:label>주요활동</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/인물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/단체"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_그림액자">
+    <rdfs:label>문익환 목사 그림액자</rdfs:label>
+    <생산일>20040300</생산일>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57194</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/갈릴리교회_주보48">
+    <rdfs:label>갈릴리교회 주보48</rdfs:label>
+    <설명>고난받는 이들을 위한 갈릴리교회 주보 제48호(1984.1.8) 박용길 장로의 필체로 예배 순서와 소식이 적혀있다. 이날 설교는 문익환 목사이다.</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47726</URL>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/갈릴리교회">
+        <단체_인물 rdf:resource="http://example.org/MIH_O/안병무"/>
+        <존립기간>19750817~19900401</존립기간>
+        <rdfs:label>갈릴리교회</rdfs:label>
+        <설명>한신대·연세대·고려대 등에서 해직당한 교수들과 그 가족들이 모여 세운 교회. 대표 설교자들은 안병무, 이우정, 이문영, 서남동, 문익환, 문동환이었다. </설명>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/대통령의_비극과_조국의_평화로운_통일">
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>대통령의 비극과 조국의 평화로운 통일</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=34989</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <쪽수>2</쪽수>
+    <생산일>19791116</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/두번째구속"/>
+    <설명>대통령의 죽음을 보며 민족의 비극을 극복하기 위한 평화통일 방안을 얘기함. 어머니께 보내는 ‘주기도’. 검열과정에서 편지 본문 다섯 줄에 검은 줄이 그어짐</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/한국신학대학_16회_졸업사진액자">
+    <rdfs:label>한국신학대학 16회 졸업사진액자</rdfs:label>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57191</URL>
+    <설명>1957년 한국신학대학의 졸업사진이 들어있는 사진 액자. 문익환 목사가 교수로 재직하고 있다는 내용이 적혀 있음</설명>
+    <생산일>19570000</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/함선생님,_자문자답,_기도의_대양">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/전주교도소"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <rdfs:label>함선생님, 자문자답, 기도의 대양</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=34975	</URL>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/함석헌">
+        <직업>사상가, 독립운동가, 종교인, 언론인, 출판인, 기독교운동가, 시민사회운동가.</직업>
+        <주요활동>씨알의 소리 발행</주요활동>
+        <rdfs:label>함석헌</rdfs:label>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의스승"/>
+        <설명>문익환에게 사상적 영항을 준 스승이자, 존경하는 어른, 씨알의 소리 발행인.&#xD;
+'김대중내란음모사건'으로 함께 투옥되었으며 문익환은 재판정 진술에서 함석헌을 "이나라의 양심"이라 칭함.</설명>
+        <인물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+        <인물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+        <다른이름>신천, 씨알, 바보새</다른이름>
+        <생몰년도>19010313~19890204</생몰년도>
+      </인물>
+    </문익환기록물_인물>
+    <생산일>19770915</생산일>
+    <설명>전주교도소에서 두 번째 단식을 중단하다 &#xD;
+해위 윤보선과 함석헌 선생에게 격려의 말씀을 쓰다.&#xD;
+시 세편을 쓰다. 1. 함(석헌)선생님, 2. 자문자답 (산문시), 3. 기도의 대양&#xD;
+「함 선생님」&#xD;
+&#xD;
+하느님의 가슴을 두드리다 말고, 저는&#xD;
+제 가슴을 열어 보여 드렸습니다.&#xD;
+갈비뼈가 앙상하게 드러난 좁은 가슴에는&#xD;
+오래된 생채기가 하나 있었습니다.&#xD;
+만사가 깜깜하기만 하던&#xD;
+십 대의 소년 시절&#xD;
+뒷산 숲속을 밤새 헤매다가&#xD;
+나도 모르는 새 가시에&#xD;
+찢긴 자국이지요. &#xD;
+&#xD;
+문득&#xD;
+지난날의 절망 같은 것의 메아리가 들리는가 싶더니&#xD;
+그 자국이 다시 찢기며&#xD;
+빨간 피가 스며 나오더군요.&#xD;
+후 ----&#xD;
+무거운 한숨 소리와 함께&#xD;
+커다란 눈물 한 방울이 떨어져&#xD;
+핏물 들어 살 속으로 스며들면서&#xD;
+새로운 아픔이 가는 떨림으로&#xD;
+온몸에 아래위로 번져 나갔습니다.&#xD;
+&#xD;
+하느님의 응답은 그뿐이었습니다.</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문성근_아기를_박용길이_안은_사진">
+    <rdfs:label>문성근 아기를 박용길이 안은 사진</rdfs:label>
+    <설명>전쟁 중 일본서 태어난 문성근(1953.5)을 안고있는 박용길의 사진</설명>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <생산일>19530300	</생산일>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/형태소재">
+    <rdfs:label>형태소재</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:AnnotationProperty>
+  <장소 rdf:about="http://example.org/MIH_O/미국_유니온신학교">
+    <rdfs:label>미국 유니온신학교</rdfs:label>
+  </장소>
+  <인물 rdf:about="http://example.org/MIH_O/문혜림">
+    <생몰년도>1936~20220311</생몰년도>
+    <주요활동>1972 방학동 새벽의집 공동체, 1976 문동환 구속후 양심범가족협의회 활동, 1986 의정부 기지촌 여성들을 위한 두레방 설립. 1992 도미 후 인권운동 단체 무지개집 설립.</주요활동>
+    <rdfs:label>문혜림</rdfs:label>
+    <다른이름>페이 문, 헤리엇 페이 핀치벡</다른이름>
+    <인물_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+    <인물_장소>
+      <장소 rdf:about="http://example.org/MIH_O/미국">
+        <rdfs:label>미국</rdfs:label>
+      </장소>
+    </인물_장소>
+    <인물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/한신부인회">
+        <설명>문익환 목사가 한신대 교수로 재직하여 사택에 살 당시 조직한 재직자 부인들 모임. 장학사업, 빈민구제, 탁아소 운영 등 활발한 사회활동을 했다. 당시 한신대 수유리 캠퍼스 밖은 황량한 벌판이어서 그 안에 거주하던 가족들은 하나의 작은 공동체를 이루어 서로 가깝게 교류하며 지냈다. 문동환의 미국인 아내 문혜림도 한신부인회 덕에 요리도 배우고 적응에 도움이 많이 되었다고 했다.</설명>
+        <단체_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <rdfs:label>한신부인회</rdfs:label>
+      </단체>
+    </인물_단체>
+    <인물_장소 rdf:resource="http://example.org/MIH_O/기독교회관"/>
+    <인물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <인물_문익환기록물>
+      <문익환기록물 rdf:about="http://example.org/MIH_O/빅토리숄_만드는_3.1사건_구속자_부인들_사진">
+        <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+        <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+        <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+        <생산일>1976	</생산일>
+        <rdfs:label>빅토리숄 만드는 3.1사건 구속자 부인들 사진</rdfs:label>
+        <설명>3.1민주구국선언문 사건 부인들이 빅토리 숄을 뜨개질하는 모습. 왼쪽에서부터 김석중, 고귀손, 박용길,공덕귀, 이우정,이태영, 이종옥</설명>
+        <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+        <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/양심범가족협의회"/>
+      </문익환기록물>
+    </인물_문익환기록물>
+    <인물_문익환기록물>
+      <문익환기록물 rdf:about="http://example.org/MIH_O/3.1민주구국선언_사건_빅토리숄">
+        <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <형태소재>편물	</형태소재>
+        <설명>3.1민주구국선언문 사건 부인들이 시위용품, 홍보, 기금마련을 위해 보라색 실로 뜨개질해 만든 V자 모양의 빅토리숄. 아랫단에 연한 보라색으로3.1을 넣었고, 코는 4코 (민주회복)이라는 의미로 교도소에서 면회를 기다릴 때 뜨기도 했다. 문혜림을 통해 해외로 판매해 기금으로 무연고 재소자들을 돕기도 했다. 이 사건의 상징적인 물건이 되었다.	</설명>
+        <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47746																																																					</URL>
+        <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/양심범가족협의회"/>
+        <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+        <rdfs:label>민주구국선언 사건 빅토리숄</rdfs:label>
+        <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+        <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+        <생산자>박용길	</생산자>
+      </문익환기록물>
+    </인물_문익환기록물>
+    <인물_관계>
+      <관계 rdf:about="http://example.org/MIH_O/문익환의친인척">
+        <rdfs:label>문익환의친인척</rdfs:label>
+        <관계_인물>
+          <인물 rdf:about="http://example.org/MIH_O/박두환">
+            <인물_장소>
+              <장소 rdf:about="http://example.org/MIH_O/평안북도_대유동">
+                <설명>박용길의 아버지 박두환이 평북 대유동 금광의 분석기사로 일하면서 정착한 곳(1922년). 1942년 박용길 어머니 현문경의 병환으로 모든 활동을 접고 어머니를 모시고 돌아온 곳. 옛날 연애시절 편지의 수신주소에 남아있음.</설명>
+                <장소_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+                <rdfs:label>평북대유동</rdfs:label>
+              </장소>
+            </인물_장소>
+            <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친인척"/>
+            <생몰년도>?~1948</생몰년도>
+            <설명>박남길, 박용애, 박용길의 아버지. 아내 현문경. &#xD;
+구한말 기마장교로 일본군에게 무장해제 당한 후 평북 대유동 금광의 분석기사로 일하며 독립운동 자금책을 맡음. 딸들을 지극히 아껴 유학도 보내고 병약한 문익환이 사위로 마땅치 않았음. 딸의 출가 때 같이 용정까지 동행함.&#xD;
+&#xD;
+"박두환 어른은 일제와 맞서다가 황해도 수안의, 프랑스인이 운영하는 광산에서 금을 채굴하는 분석 주임이 되었다.&#xD;
+ 박두환은 해방과 함께 광복군 참모로 복귀하여 국군 재건에 전념하다가 순직해서 동작동 국립묘지에 묻혔다"&#xD;
+"박용길의 아버지 박두환 어른은 딸들을 대단히 아끼는 분이었다. 당시로서는 희귀한 멋쟁이여서 머리도 빗이 아니라 브러시로 빗고, 절대로 책을 구기거나 선발 뒤축을 밟아 신지 못하게 했지만 아이들 옷을 명주로 해 입히면 여자들을 고생시킨다고 혼낼 정도로 여성 존중이 극진했다. 그러나 사위를 고르는 잣대를 건강에 둔 까닭에 유독 문익환만 그 어른의 기대치를 넘어서지 못했다."(문익환 평전)</설명>
+            <rdfs:label>박두환</rdfs:label>
+          </인물>
+        </관계_인물>
+      </관계>
+    </인물_관계>
+    <부부관계 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <인물_단체 rdf:resource="http://example.org/MIH_O/양심범가족협의회"/>
+    <설명>하트퍼트 신학대학 중 유학 온 15살 연상 문동환을 만나 결혼. </설명>
+  </인물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/판문점에서_양측의_깃발_든_유엔군">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <생산일>1951~1953	</생산일>
+    <rdfs:label>판문점에서 양측의 깃발 든 유엔군</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <생산자>문익환</생산자>
+    <설명>정전회담장에서 북조선 국기와 유엔기를 들어보이는 미군&#xD;
+문익환 사진 1951~1953</설명>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/민족화해협력범국민협의회">
+    <설명>상임의장 박용길(1998~2001), 상임고문 박용길(2002)</설명>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>민족화해협력범국민협의회</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시위용품_부채">
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47732</URL>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/한국기독교교회협의회">
+        <설명>한국기독교교회협의회(韓國基督敎敎會協議會)는 한국 기독교계의 일치 정신을 구현하고 에큐메니컬 운동을 위하여 창설된 범기독교 협의체를 말한다. (위키백과)&#xD;
+박용길, 문혜림 등은 종로 5가의 KNCC 인권위원회 사무실에서 구속자 가족을 위한 석방운동을 벌였다. 박용길 편지에 자주 등장하는 "종로 5가"는 이곳을 가리킨다. </설명>
+        <다른이름>NCC</다른이름>
+        <rdfs:label>KNCC</rdfs:label>
+        <다른이름>KNCC</다른이름>
+        <존립기간>19240924~</존립기간>
+        <단체_장소 rdf:resource="http://example.org/MIH_O/기독교회관"/>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <설명>3.1 민주구국선언사건 당시 공개 재판을 요구하며 시위를 벌일 때 사용하던 부채(1)로 '민주인사 석방하라', 공개재판이라 써져있다. 부채(2)는 민족통일이라고 쓰여있다. 김겸 박사 복원3.1 민주구국선언사건 당시 공개 재판을 요구하며 시위를 벌일 때 사용하던 부채로 '민주인사 석방하라', 공개재판이라 써져있다. 부채 2는 민족통일이라고 쓰여있다. 김겸 박사 복원</설명>
+    <rdfs:label>시위용품 부채</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산일>19760529</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/양심범가족협의회"/>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/안동교회">
+    <단체_문익환기록물>
+      <문익환기록물 rdf:about="http://example.org/MIH_O/서울_안동교회에서_올린_결혼식">
+        <rdfs:label>서울 안동교회에서 올린 결혼식</rdfs:label>
+        <설명>서울 안동교회에서 올린 혼례식 1944년 6월 17일 최거덕 목사 주례</설명>
+        <생산일>19440617	</생산일>
+        <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+        <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+        <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+        <문익환기록물_단체>
+          <단체 rdf:about="http://example.org/MIH_O/만보산교회">
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+            <rdfs:label>만보산교회</rdfs:label>
+            <단체_장소>
+              <장소 rdf:about="http://example.org/MIH_O/북간도_신경">
+                <rdfs:label>북간도 신경</rdfs:label>
+              </장소>
+            </단체_장소>
+            <설명>문익환이 일본 신학 유학 중 학병 징집을 피해 만주 봉천신학교에 전학했다가 며칠 만에 학교를 그만두고 아버지의 친구의 안내로 전도사 일을 맡은 교회. 신경(현재 장춘)보다 더 깊은 산 속에 위치해 있으며 만보산 교회 시절 박용길과 결혼하고 신혼 생활을 했다. 동생 문동환 목사도 함께였다.</설명>
+          </단체>
+        </문익환기록물_단체>
+      </문익환기록물>
+    </단체_문익환기록물>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>서울에 있는 안동교회는 문익환과 박용길이 1944년 6월 17일 결혼식을 올린 장소이다. 주례는 최거덕 목사. 딸을 끔찍이 아낀 박두환은 결혼이 정해지자 3일 전에 약혼식까지 치러주었다. &#xD;
+"박용길은 폐결핵 청년을 반대하는 친정 부모에게 6개월만 살더라도 시집을 가겠노라고 떼를 썼다. 그리고는 여든 살의 나이를 넘길 때까지 문익환 목사가 갔던 모든 길을 뒤따라갔다." &#xD;
+"박두환 어른은 하는 수 없이 문익환더러 한 번 다녀가라고 했다. 그 소식이 용정에 닿자 어머니는 만보산까지 찾아가 문익환을 채비시켰다. 그리고 문재린 목사와 김순호 전도사를 한데 묶어 서울로 보냈다.&#xD;
+양가 부모가 만난 자리에서 박두환 어른은 간단하게 요청했다. 폐병 환자를 사위로 삼을 수는 없으니 엑스레이를 찍어오라! 다행히 병원에서는 문익환이 완치된 것으로 진단하였다. 그러자 누구보다도 좋아하는 이가 박두환 어른이었다. 박두환 어른은 기뻐서 결혼식을 사흘 앞두고 약혼식까지 올려주었다."&#xD;
+(문익환 평전)</설명>
+    <rdfs:label>안동교회</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/사단법인_통일맞이_칠천만겨레모임_현판">
+    <rdfs:label>사단법인 통일맞이 칠천만겨레모임 현판</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57192</URL>
+    <형태소재>철제</형태소재>
+    <설명>사단법인 칠천만겨레모임의 이름이 적혀있는 철제 현판</설명>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/통일맞이">
+        <다른이름>사단법인통일맞이팔천만겨레모임</다른이름>
+        <다른이름>사단법인통일맞이칠천만겨레모임</다른이름>
+        <존립기간>19940421~</존립기간>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <주요활동>통일을 준비하는 모임. 대표 박용길(1994~1997), 상임고문 박용길(2002)</주요활동>
+        <rdfs:label>통일맞이</rdfs:label>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산일>1994이후</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/구약번역위원_세_사람">
+    <설명>공동번역성서 구약번역위원 세 사람 곽노순, 선종완, 문익환의 사진. 곽노순이 미국에 학업을 마치러 가기 전 대학로(선종완 신부 가톨릭대 연구실) 사진관에서 기념촬영을 했다.  </설명>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/하느님과신앙">
+        <rdfs:label>하느님과신앙</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/곽노순">
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <인물_단체>
+          <단체 rdf:about="http://example.org/MIH_O/대한성서공회_구약공동번역위원회">
+            <rdfs:label>대한성서공회</rdfs:label>
+            <설명>책임위원: 문익환 목사.&#xD;
+가톨릭교회는 제2차 바티칸 공의회(1962-1965) 이후 모든 신자가 성경에 쉽게 접근하도록 요청하였고, 성경 번역에 있어서 개신교와 가톨릭간의 협조를 권고하였다. 한국에서도 공동번역을 추진하기 위하여 개신교와 가톨릭 학자들로 1968년 1월에 구약공동번역위원회가 구성되었고, 이어서 1969년 1월에는 신약공동번역위원회가 구성되었으며, 외경의 번역 위원들과 문장위원들을 선정하였다. (대한성서공회 홈페이지) </설명>
+            <존립기간>19680100~19770400</존립기간>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+          </단체>
+        </인물_단체>
+        <인물_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/목원대_강연_후_빈들감리교회에서_식사하는_모습">
+            <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+            <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47706</URL>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+            <생산일>19901120</생산일>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <문익환기록물_단체>
+              <단체 rdf:about="http://example.org/MIH_O/조국통일범민족연합">
+                <rdfs:label>조국통일범민족연합</rdfs:label>
+                <다른이름>범민련</다른이름>
+                <다른이름>조국통일범민족연합 남측본부</다른이름>
+                <존립기간>19901120~</존립기간>
+                <설명>조국통일을 목적으로 결성한 재야운동단체. &#xD;
+북한과 해외의 모든 민족성원이 참여하여 민족의 통일방안과 통일실천의 과제를 논의하자는 목적으로 출발한 제1회 범민족대회(1989 개최)에서 조국통일 실현 과제인 민족통일대연합 전선의 범민족적 통일운동체를 결성하기로 함. 문익환 목사, 1월 23일, 조국통일범민족연합 남측 본부 결성준비위원회 결성, 위원장 취임. (이후 통일맞이 칠천만겨레모임 운동 준비하며 이견으로 탈퇴) 95년 2월 25일 남특본부를 정식으로 결성. 연방제 통일 지지, 미국 철수, 국가보안법 철폐 둥을 내세우고 있어 1997년 대법원에서 이적단체 판결 받음.</설명>
+                <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+              </단체>
+            </문익환기록물_단체>
+            <rdfs:label>목원대 강연 후 빈들감리교회에서 식사</rdfs:label>
+            <설명>“민족의 하나됨을 위하여”를 제작하기 위해 강연을 마치고 빈들감리교회에서 식사하는 모습. 왼쪽부터 강천 곽노순 목사(목원대 교수, 문익환의 제자로 구약 성서 번역 같이 함), 정지강 목사, 문익환, 박용길</설명>
+            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+          </문익환기록물>
+        </인물_문익환기록물>
+        <생몰년도>1938~</생몰년도>
+        <인물_관계>
+          <관계 rdf:about="http://example.org/MIH_O/문익환의제자">
+            <rdfs:label>문익환의제자</rdfs:label>
+            <관계_인물>
+              <인물 rdf:about="http://example.org/MIH_O/유원규">
+                <생몰년도>1951~</생몰년도>
+                <인물_장소 rdf:resource="http://example.org/MIH_O/기독교회관"/>
+                <직업>목사</직업>
+                <주요활동>1984~2016 한빛교회 담임목사</주요활동>
+                <인물_사건>
+                  <사건 rdf:about="http://example.org/MIH_O/문익환목사병원치료요구농성">
+                    <rdfs:label>문익환목사병원치료요구농성</rdfs:label>
+                    <사건_장소 rdf:resource="http://example.org/MIH_O/기독교회관"/>
+                    <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                    <설명>박용길 장로 등 가족들은 다섯번째 수감 중 급속히 건강이 악화된 문익환 목사의 병원치료 등을 요구하며 기독교회관 7층 인권위원회 사무실에서 1989.12.5부터 농성을 시작했다. 그 외 석방치료를 위한 운동으로는 '문익환 선생 긴급 병원치료 실현을 위한 위원회' 주도로 각계 원로 90명의 서명을 발표, 전국민 서명운동을 벌인 것이 있다.</설명>
+                    <사건_문익환기록물>
+                      <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_병원치료요구_농성_안내문">
+                        <rdfs:label>문익환 목사 병원치료요구 농성 안내문</rdfs:label>
+                        <설명>유원규 당시 한빛교회 담임 목사가 작성한 문익환 목사의 병원 치료를 요구하는 농성 포스터. 농성장소인 기독교 회관 내 인권위사무실의 위치와 농성 일자가 적혀 있음</설명>
+                        <생산일>19891205</생산일>
+                        <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+                        <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+                      </문익환기록물>
+                    </사건_문익환기록물>
+                  </사건>
+                </인물_사건>
+                <인물_단체 rdf:resource="http://example.org/MIH_O/한빛교회"/>
+                <인물_문익환기록물 rdf:resource="http://example.org/MIH_O/문익환_목사_병원치료요구_농성_안내문"/>
+                <설명>문익환의 제자, 목사.&#xD;
+문익환을 시인으로서 아무도 몰래 열매를 맺는 무화과에 비유한 적이 있음.</설명>
+                <rdfs:label>유원규</rdfs:label>
+              </인물>
+            </관계_인물>
+          </관계>
+        </인물_관계>
+        <인물_사건>
+          <사건 rdf:about="http://example.org/MIH_O/공동번역성서번역">
+            <설명>신구교일치 운동의 일환으로 천주교와 개신교가 공동으로 성경을 번역, 출판하게 되었는데 구약의 번역위원으로 문익환 목사가 임명됨. 한신대 교수를 사임하여 한신대 사택에서 수유동 자택(현 통일의집)으로 이사. 1976년 3.1민구구국선언 사건으로 구속되어 마무리 작업을 마치지 못함. 1977년 공동번역성경 출간</설명>
+            <사건_장소>
+              <장소 rdf:about="http://example.org/MIH_O/통일의집">
+                <rdfs:label>통일의집</rdfs:label>
+              </장소>
+            </사건_장소>
+            <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <rdfs:label>공동번역성서번역</rdfs:label>
+          </사건>
+        </인물_사건>
+        <직업>신학교수, 목사</직업>
+        <설명>문익환 제자, 동료로서 한국 신구약공동번역성서 공동작업을 하였으며 목원대학에서 후학을 가르침. 대한성서공회에서 기획하여 번역에 대한 구술 기록이 남아있음. (곽노순, 2019)</설명>
+        <rdfs:label>곽노순</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <rdfs:label>구약번역위원 세 사람</rdfs:label>
+    <생산일>19730905</생산일>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/선종완">
+        <인물_사건 rdf:resource="http://example.org/MIH_O/공동번역성서번역"/>
+        <다른이름>라우렌시오</다른이름>
+        <인물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+        <활동단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+        <생몰년도>19150808~19760711</생몰년도>
+        <설명>카톨릭 신부로서 문익환과 함께 신구약공동성서번역에 참여. 성모영보수녀회 설립자</설명>
+        <주요활동>성서번역</주요활동>
+        <직업>신부</직업>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <rdfs:label>선종완</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/공동번역성서번역"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/면회록">
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36313	</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/세번째구속">
+        <사건_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+        <사건_장소>
+          <장소 rdf:about="http://example.org/MIH_O/공주교도소">
+            <rdfs:label>공주교도소</rdfs:label>
+          </장소>
+        </사건_장소>
+        <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <설명>내란음모죄로 32개월 수감</설명>
+        <발생연도>19800517~19821224</발생연도>
+        <rdfs:label>세번째구속</rdfs:label>
+      </사건>
+    </문익환기록물_사건>
+    <rdfs:label>면회록</rdfs:label>
+    <설명>박용길이 문익환 면회시 기록한 노트로 평화 시 등이 기록돼 있다.	</설명>
+    <생산일>1980년대	</생산일>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/공주교도소"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/감옥에서_사용한_플라스틱_숟가락">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산일>1980~1990년대	</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/공주교도소"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36281</URL>
+    <설명>감옥에서 사용했던 플라스틱 숟가락&#xD;
+1980-90년대</설명>
+    <rdfs:label>감옥에서 사용한 플라스틴 숟가락</rdfs:label>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/경기여자고등학교_졸업앨범">
+    <rdfs:label>경기여자고등학교 졸업앨범</rdfs:label>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/경성공립여자고등학교">
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <rdfs:label>경기여고</rdfs:label>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산일>19370300</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>박용길의 경성공립여자고등보통학교(경기여자고등학교) 졸업앨범으로 도서반 임원 활동을 하던 박용길의 사진도 들어있다. 졸업 후 언니와 함께 일본요코하마여자신학교로 유학감</설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/갈릴리교회_감사헌금봉투_이종옥">
+    <rdfs:label>갈릴리교회 감사헌금봉투 이종옥</rdfs:label>
+    <설명>박용길 장로가 만든 갈릴리교회 감사헌금봉투. 사과그림과 붓글씨로 '감사'를 써서 꾸몄다. 이종옥의 이름이 쓰여있다.</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47728	</URL>
+    <형태소재>종이</형태소재>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/갈릴리교회"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/생산자">
+    <rdfs:label>생산자</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/김천에서_유학가기_전_찍은_가족사진">
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/황금동교회"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/김천"/>
+    <rdfs:label>문익환 미국 유학(1949)가기 전 김천에서 찍은 가족사진</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>문익환 미국 유학(1949) 전 김천에서 찍은 가족사진</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/문선희">
+        <설명>문재린 김신묵의 넷째이자 장녀, 문익환 문동환의 여동생. 돌도 되지 않았을 때 열병에 걸려 혀가 다섯 치나 빠져나왔는데 병원이 있는 도시까지 가지 못해 기도했는데 병이 나음, 그때 이름이 증환이었는데 그 이후로 선희가 됨(문익환 평전). 신학 박사 취득. 미국과 캐나다 유학에서 돌아올때 가져온 피아노가 통일의 집에 전시되어 있음.   </설명>
+        <인물_관계>
+          <관계 rdf:about="http://example.org/MIH_O/문익환의형제">
+            <rdfs:label>문익환의형제</rdfs:label>
+            <관계_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+          </관계>
+        </인물_관계>
+        <생몰년도>1926~2001</생몰년도>
+        <rdfs:label>문선희</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <생산일>1948</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/김신묵"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_학사모_사진액자">
+    <rdfs:label>문익환 목사 학사모 사진액자</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57185</URL>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <생산일>19470617</생산일>
+    <설명>조선신학교(현 한신대학교) 졸업학사모 차림인 문익환 목사를 찍은 사진을 넣어놓은 사진액자</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/감옥에서_받은_칫솔로_만든_십자가">
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/공주교도소"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/민주통일민중운동연합"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <생산일>1980~1990년대</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+    <설명>함께 수감되어 있던 학생들이 문익환에게 선물한 칫솔을 깍아 만든 플라스틱 십자가&#xD;
+1980-90년대</설명>
+    <rdfs:label>감옥에서 받은 칫솔로 만든 십자가</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36279</URL>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/체류목적">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:label>체류목적</rdfs:label>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/통일_운동은_평화_운동이자_생명_사랑_운동이다">
+    <쪽수>2</쪽수>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <형태소재>봉함엽서	</형태소재>
+    <rdfs:label>통일 운동은 평화 운동이자 생명 사랑 운동이다</rdfs:label>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <생산자>문익환</생산자>
+    <생산일>19911224</생산일>
+    <수신주소>
+      <장소 rdf:about="http://example.org/MIH_O/수유동">
+        <설명>성경번역일에 집중하기 위해 한신대를 사직하면서 수유동의 단독주택 입주. 옥중편지의 대부분의 수신주소가 수유동이다. 문익환 목사 사후에 박용길이 '통일의 집'이라는 현판을 걸어 현재의 통일의 집이 되었다.</설명>
+        <다른이름>통일의집</다른이름>
+        <rdfs:label>수유동</rdfs:label>
+      </장소>
+    </수신주소>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36285</URL>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안동교도소"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/조국통일범민족연합"/>
+    <설명>성탄절 전야에 평화를 생각하며, 민족 해방과 민중 해방은 하나라는 자신의 주장이 통일 운동을 평화 운동으로 본 친구 장준하의 생각을 해명한 것이라는 내용.</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/장준하"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문재린이_집례한_윤동주의_장례식">
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/용정중앙교회">
+        <rdfs:label>용정중앙교회</rdfs:label>
+        <설명>1907~1908년 경 중국 간도성 연길현 용정촌에 설립된 장로교회. 용정중앙교회는 장로교·감리교 교인들이 연합하여 설립하였으며, 장로교 선교구역에 편입된 이후 간도지역 종교활동은 물론 민족운동·계몽운동의 중심기관으로서 역할을 수행하였다. 1940년 당시의 담임목사는 문재린이었고 교인 수는 905명이었다. 이후 공산주의자들이 교회를 접수하면서 1946년 용정중앙교회는 폐쇄되었다.&#xD;
+(한국민족문화대백과사전)</설명>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+        <단체_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+        <단체_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/문재린_목사_용정중앙교회_근속_10주년_축사">
+            <rdfs:label>문재린 목사 용정중앙교회 근속 10주년 축사</rdfs:label>
+            <생산일>19420718</생산일>
+            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_용정"/>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+            <설명>김약연 목사가 쓴 문재린 목사의 용정중앙교회 근속 10주년 축사의 복사본. 세로쓰기로 7쪽 분량. </설명>
+          </문익환기록물>
+        </단체_문익환기록물>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+    <생산일>19450306</생산일>
+    <rdfs:label>문재린이 집례한 윤동주의 장례식</rdfs:label>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/민중민주운동협의회">
+    <존립기간>19840629~1985.329</존립기간>
+    <rdfs:label>민민협</rdfs:label>
+    <설명>12 개 단체， 일본 기업 아세아 스와니(이리) 김덕순 탄압 균탄 성명서 발표&#xD;
+노동， 농민， 청년， 종교 동 사회 각 민주세력이 모여 ‘민중민주운동협의회&#xD;
+(민민협)’창립. ‘민중민주운동선언’ 발표함으로서 연대 투쟁의 창구 역할을&#xD;
+함. 민주통일국민회의와 통합하여 민주통일민중운동연합(민통련)으로 발전</설명>
+    <다른이름>민민협, 민주통일민중운동연합(민통련)	</다른이름>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/정전회담_중_판문점_막사_앞에_서있는_인민군_병사">
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36293</URL>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <생산일>1950~1953	</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <설명>문익환이 찍은 판문점의 풍경</설명>
+    <rdfs:label>정전회담 중 판문점 막사 앞에 서있는 인민군 병사</rdfs:label>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/정전회담"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/일본_조선어학학교_교장_시절">
+    <rdfs:label>일본 조선어학학교 교장 시절</rdfs:label>
+    <설명>유엔군으로 일본에 있을때 교장으로 한글을 가르쳤던 조선어학학교 표지판 앞의 문익환과 한 명의 남성&#xD;
+</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36309	&#xD;
+	</URL>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <생산일>1950~1953	</생산일>
+  </문익환기록물>
+  <장소 rdf:about="http://example.org/MIH_O/마석모란공원">
+    <설명>문익환 박용길 묘역</설명>
+    <rdfs:label>마석모란공원</rdfs:label>
+  </장소>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/난형난제인_문익환과_문동환">
+    <수신자>박용길</수신자>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/여섯번째구속"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=41519</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <rdfs:label>난형난제인 문익환과 문동환</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안동교도소"/>
+    <설명>소식을 기뻐하고, 『민주구국선언』서명에서 자신이 빠지기로 한 약속이 너무&#xD;
+허술하여 금방 탄로난 경위를 회고</설명>
+    <생산일>19920228</생산일>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/이해동">
+        <인물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의제자"/>
+        <직업>목사</직업>
+        <설명>문익환의 제자. 3.1민주구국선언문 서명자가 아니지만 선언문을 교회 등사판으로 등사하는 걸 허락했다는 사실 때문에 기소되어 옥고를 치름. 김대중 내란음모 사건으로 구속.</설명>
+        <주요활동>한국신학대졸업, 한빛교회 담임목사</주요활동>
+        <생몰년도>19341005~</생몰년도>
+        <rdfs:label>이해동</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/신경중앙교회">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>신경중앙교회</rdfs:label>
+    <설명>만보산교회 전도사 시절 첫 아이(문영실, 1945~1946)를 낳았는데 박용길의 처지를 딱하게 여긴 신경 중앙교회 목사의 초청으로 전도사로 부임</설명>
+    <단체_장소 rdf:resource="http://example.org/MIH_O/북간도_신경"/>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/폭격당한_조선총독부_건물">
+    <생산일>1951~1953	</생산일>
+    <생산자>문익환</생산자>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <rdfs:label>폭격당한 조선총독부 건물</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36305</URL>
+    <설명>전쟁으로 폭격당한 옛 조선총독부 건물, 문익환 사진 1951~53</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/군용기_밖_풍경">
+    <설명>일본과 판문점을 오가는 비행기 안에서 촬영한 하늘을 나는 여러대의 군용기들. 문익환 촬영. 1952-1953</설명>
+    <rdfs:label>군용기 밖 풍경</rdfs:label>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/정전회담"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <생산일>1952~1953	</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/명동촌_문익환_문동환_생가의_흙">
+    <rdfs:label>명동촌 문익환 문동환 생가의 흙</rdfs:label>
+    <설명>2019년 개봉된 영화 "북간도의 십자가" 촬영 중에 역사학자 심용환 소장이 흙을 담았고 촬영팀이 기증함. 통일의 집 전시중</설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>20180602</생산일>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=37310</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/한신대_캠퍼스에서_사남매_호근,_영금,_성근,_의근">
+    <rdfs:label>한신대 캠퍼스에서 사남매</rdfs:label>
+    <설명>한신대 캠퍼스에서 사남매 왼쪽부터 호근, 영금, 성근, 의근</설명>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/문영금">
+        <생몰년도>19480707~</생몰년도>
+        <활동단체>(사)늦봄문익환기념사업회	</활동단체>
+        <직업>통일의집 관장	</직업>
+        <설명>문익환의 딸. 3남1녀중 둘째	</설명>
+        <다른이름>금구슬</다른이름>
+        <rdfs:label>문영금</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/문의근">
+        <설명>문익환, 박용길의 아들. 3남1녀중 셋째	</설명>
+        <생몰년도>19500303~	</생몰년도>
+        <rdfs:label>문의근</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <생산일>1960년대	</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/한신대캠퍼스"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/문호근">
+        <rdfs:label>문호근</rdfs:label>
+        <설명>문익환의 장남, 오페라 및 연극 연출가.&#xD;
+문익환의 전주교도소 단식 경과를 현장기록하여 문익환의 본질을 생생하게 보여주는 소중한 자료로 남김. </설명>
+        <인물_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/땅의_진실_몸의_진실">
+            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+            <생산일>19821124</생산일>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+            <rdfs:label>땅의 진실 몸의 진실</rdfs:label>
+            <쪽수>2</쪽수>
+            <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+            <설명>바위같은 아버지와 손자 바우의 이름에 대한 명상, 땅의 진실과 몸의 진실의 문제에 대한 생각을 표현</설명>
+            <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+          </문익환기록물>
+        </인물_문익환기록물>
+        <인물_장소 rdf:resource="http://example.org/MIH_O/수유동"/>
+        <생몰년도>19461117~20010517</생몰년도>
+        <부부관계 rdf:resource="http://example.org/MIH_O/김신묵"/>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/문성근">
+        <인물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+        <rdfs:label>문성근</rdfs:label>
+        <설명>문익환, 박용길의 아들. 3남1녀중 막내</설명>
+        <생몰년도>19530528~</생몰년도>
+        <직업>정치인, 배우, 사회운동가</직업>
+        <인물_문익환기록물 rdf:resource="http://example.org/MIH_O/땅의_진실_몸의_진실"/>
+        <인물_장소 rdf:resource="http://example.org/MIH_O/수유동"/>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/1957년_한국신학대학_16회_졸업사진액자">
+    <rdfs:label>한국신학대학 1957년 16회 졸업사진액자</rdfs:label>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/박용길이_6.25_31주년에_보낸_편지">
+    <생산일>19810625</생산일>
+    <설명>세번째구속 141신 “당신이 안 계시는데 만난 전쟁 31년 전 일들이 되살아나는군요. 너머도 너머도 온겨레가 골고루 당한 고생. 죽음, 너머나 큰 비극이었죠. 타의로 갈라진 국토와 민족. 진작 우리 민족이 깨어서 통일을 이룩해야 했었다고 생각됩니다. ”&#xD;
+1981.6.25.</설명>
+    <rdfs:label>박용길이 6.25 31주년에 보낸 편지</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/공주교도소"/>
+    <생산자>박용길	</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+  </문익환기록물>
+  <관계 rdf:about="http://example.org/MIH_O/문익환의자녀">
+    <rdfs:label>문익환의자녀</rdfs:label>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/문의근"/>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/문성근"/>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/문영금"/>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/문호근"/>
+  </관계>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/땅의_평화_붓글씨">
+    <rdfs:label>땅의 평화 붓글씨</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36254</URL>
+    <설명>인천의 청년모임 『책 터』가 "1993통일염원 인천시민문화대동제”에서 준우승으로 받은 문익환의 글씨 [기증: 이충현, 청년문화공간 터사랑]</설명>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/조국통일범민족연합"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>19930808	</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시집_두_하늘_한_하늘">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+    <문익환기록물_유형>
+      <유형 rdf:about="http://example.org/MIH_O/도서간행물류">
+        <rdfs:label>도서간행물류</rdfs:label>
+        <유형_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/월간_말_1995년_9월표지_판문점을_넘어오는_박용길">
+            <rdfs:label>월간 말 1995년 9월표지 판문점을 넘어오는 박용길</rdfs:label>
+            <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/통일맞이"/>
+            <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/박용길방북"/>
+            <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+            <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36288</URL>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+            <생산자>월간말</생산자>
+            <설명>방북 후 양 팔을 높이 들고 헌병의 인도에 따라 판문점을 넘어오는 박용길 1995.7.31</설명>
+          </문익환기록물>
+        </유형_문익환기록물>
+      </유형>
+    </문익환기록물_유형>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/김근태">
+        <인물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <활동단체>민주화운동청년연합(민청련)</활동단체>
+        <직업>민주화운동가, 정치인</직업>
+        <주요활동>민청련 사건으로 구속, 로버트케네디 인권상 수상, 국회의원, 보건복지부 장관, 열린우리당 당의장</주요활동>
+        <설명>문익환의 민주화 운동 동지.&#xD;
+민청련사건으로 투옥, 고문.</설명>
+        <생몰년도>1947021420111230</생몰년도>
+        <rdfs:label>김근태</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <설명>문익환의 네 번째 시집. 1986.6.3 서울구치소에서 인재근에게 전해준 시 &lt;근태가 살던 방이란다&gt;도 수록돼 있다. &#xD;
+잠꼬대 아닌 잠꼬대 / 열두 달 아침 /새날 / 외면한 얼굴 / 근태가 살던 방이란다 / 아침 예배 / 억장 무너지는 기다림 / 내가 바&#xD;
+라는 세상 / 우리는 호수랍니다 / 예수의 기도- / 일하는 사람들의 나라 / 큰 슬픔 / 샛별 아침 / 당신의 청춘은 / 지금은 분명&#xD;
+거부할 때입니다 / 하느님의 바보들이여 / 한씨 연대기 / 존재의 근원 / 뽑아 버린다 / 419 / 양심이라고 / 땅의 양심 / 밥알들&#xD;
+의 양심 / 바람의 양심 / 나무의 양심 / 어머님의 양심 / 당신의 양심 / 오월의 자유 / 비무장 지대 / 평행선 / 동주야 / 이소선&#xD;
+여사 / 당신의 천국은 미친 불길이었습니다 / 당신과 함께 죽어 / 반비례 / 나의 조국 나의 사랑 / 울음소리로 / 그렇게도 깜깜&#xD;
+했더냐 / 그날이 오면 / 조국이 앓고 있습니다 / 당신은 갔습니다 / 당신은 웃음입니다 / 기다림 / 두 하늘 한 하늘 / 푸른 옷깃&#xD;
+/ 찢긴 마음 / 큰 스승이시여 / 흰 수염이시여 / 선생님 선생님 선생님 / 당신은 온몸으로 양심이었습니다 / 후기-네번째 시집을&#xD;
+내면서</설명>
+    <rdfs:label>시집 두 하늘 한 하늘</rdfs:label>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/슬라이드_필름_보관_상자">
+    <설명>문익환이 미국에서 가져온 슬라이드 상자 정전회담 당시 판문점과 군인들의 모습을 칼라 사진으로 찍어 보관했다. 그외에도 교회 친지 풍경 사진들 포함됨</설명>
+    <rdfs:label>슬라이드 필름 보관 상자</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+    <생산일>1950년대	</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/프린스턴신학교"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <형태소재>철제</형태소재>
+    <생산자>문익환</생산자>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36292</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전쟁_때_개천에서_물놀이하는_한국_병사들">
+    <rdfs:label>전쟁 때 개천에서 물놀이하는 한국 병사들</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36296	</URL>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>1950	</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/코스모스길에서_찍은_부부사진">
+    <rdfs:label>코스모스길에서 찍은 부부사진</rdfs:label>
+    <형태소재>흑백사진</형태소재>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>코스모스 길에서 서있는 젊은날의 문익환 박용길</설명>
+    <생산일>19600000</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/제주도_피난시절_가족사진">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+    <생산일>19500000</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <설명>제주도 피난시절 가족 사진 1951</설명>
+    <rdfs:label>제주도 피난시절 가족사진</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/제주"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36299</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/판문점의_남한병사_셋">
+    <rdfs:label>판문점의 남한병사 셋</rdfs:label>
+    <설명>판문점의 한국 병사 세 명중 한 명이 꽃을 들고 있다. 컬러 슬라이드 사진</설명>
+    <생산자>문익환</생산자>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>1950~1953</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/박용길_방북_스크랩">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/박용길방북"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>박용길 방북 스크랩</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <설명>북쪽에 다녀온 박용길 1995.6.28.~7.31&#xD;
+통일에 대한 열망은 박용길을 방북길에 오르게 했다.&#xD;
+도배지를 재활용해 손수 만든 방북 스크랩 &lt;북쪽에 다녀옴&gt;으로&#xD;
+해외 여성들이 양심수 박용길 석방 운동을 벌이는 기사 등을 모아놓았다. </설명>
+    <생산자>박용길	</생산자>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+    <생산일>19950628~19950731</생산일>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/통일맞이"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전쟁_중_아내에게_보낸_편지">
+    <생산일>19511118</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <rdfs:label>전쟁 중 아내에게 보낸 편지</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/제주"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <쪽수>2</쪽수>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <수신주소>제주도 서부교회</수신주소>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+    <생산자>문익환</생산자>
+    <설명>문익환이 박용길에게 보낸 편지&#xD;
+“이렇게 서로를 그리워 하면서도 만나지 못하는 것 생각하면 속상하기 그지 없으나 부인을 공산군에게 잃고 마음을 부치지 못해서 안절부절하시는 계목사님을 볼 때마다 모든 불평이 살아지곤 해요.&#xD;
+수용소에 어린아이 넷을 가지고 있는 이덕순이라는 부인이 있는가 찾아 보시오. 선교사 부인이 알구 싶어 간절히 하니까“&#xD;
+1951</설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <발신주소>일본</발신주소>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/평양숭실학교_교복입고_윤동주와">
+    <rdfs:label>평양숭실학교 교복입고 윤동주와</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+    <생산일>19350000</생산일>
+    <URL>https://archives.kdemo.or.kr/contents/view/182</URL>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/Webpage.do?page_id=169</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/숭실중학교"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>평양숭실학교 시절 동창들과 기념촬영. 뒷줄 가운데 문익환, 오른쪽 윤동주. 윤동주가 문익환의 모자가 멋져보여서 바꿔서 찍고 호떡을 사주었다는 일화가 있음.</설명>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/신사참배거부퇴학">
+        <rdfs:label>신사참배거부퇴학</rdfs:label>
+        <설명>평양 숭실중학교 재학시절 조선총독부가 서양 선교사들이 경영하는 기독교 학교에까지 찾아와 신사참배를 강요하자 신사참배 문제로 시위하고 문익환, 윤동주 등의 학생들이 시위, 퇴학함. 당시 자퇴한 37명의 학생들에게 숭실고가 1997년 명예졸업장을 수여함. </설명>
+        <사건_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <사건_인물 rdf:resource="http://example.org/MIH_O/윤동주"/>
+        <사건_인물 rdf:resource="http://example.org/MIH_O/장준하"/>
+        <사건_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+      </사건>
+    </문익환기록물_사건>
+  </문익환기록물>
+  <장소 rdf:about="http://example.org/MIH_O/베이징">
+    <장소_인물>
+      <인물 rdf:about="http://example.org/MIH_O/유원호">
+        <인물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <설명>문익환의 동지, 방북을 동행한 정경모와의 연락을 맡음. 평북 신의주 출신. 6.25직전 월남, 광주 시의원. 문익환 목사는 김도경 부의장 비서관으로 있을 때 알게 됨. 1989년 함께 방북한후 동반 귀국하여 연행됨.</설명>
+        <직업>비서관, 시의원, 사업가</직업>
+        <생몰년도>1931~20191027	</생몰년도>
+        <rdfs:label>유원호</rdfs:label>
+      </인물>
+    </장소_인물>
+    <장소_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <설명>1989년 4월 방북을 마치고 머물러 기자회견 한 장소</설명>
+    <rdfs:label>베이징</rdfs:label>
+  </장소>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시편_성서번역_중간교정본">
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57211</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/하느님과신앙"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/공동번역성서번역"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <생산일>1968~1976</생산일>
+    <설명>문익환 목사가 번역한 시편 2편부터 41편까지와 109편에서 115편을 타이핑한 교정본. 그 위에 손글씨로 재교정을 보았다.&#xD;
+&#xD;
+</설명>
+    <rdfs:label>시편 성서번역 중간교정본</rdfs:label>
+    <생산자>문익환</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/주기사항">
+    <rdfs:label>주기사항</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/직업">
+    <rdfs:label>직업</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_캐리커쳐_그림액자">
+    <rdfs:label>문익환 목사 캐리커쳐 그림액자</rdfs:label>
+    <생산자>이하	</생산자>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57193</URL>
+    <설명>이하 작가가 문익환 목사의 모습을 특수실리콘물감을 통해 출력, 캔버스 위에 그린 그림이 들어가있는 액자&#xD;
+전시 보도(2012) http://www.kwangju.co.kr/read.php3?aid=1336575600467547007</설명>
+    <생산일>2012이전</생산일>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+  </문익환기록물>
+  <장소 rdf:about="http://example.org/MIH_O/진주교도소">
+    <rdfs:label>진주교도소</rdfs:label>
+    <장소_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+  </장소>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전국언론노동조합연맹_문화방송노동조합_붓글씨">
+    <rdfs:label>전국언론노동조합연맹 문화방송노동조합 붓글씨</rdfs:label>
+    <설명>박용길 장로가 쓴 붓글씨 연습본. 전국언론노동조합연맹의 문화방송노동조합 단체명이 적혀 있음. 현판을 위해 써준 글씨</설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <생산자>박용길</생산자>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/역사의_새로운_장을_열_위대한_국민">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <설명>1987년 대선 과정에서 민통련이 겪은 분열에 대한 아쉬움과 1988년 총선의 결과로 국민의 힘을 믿게 된 과정을 기술 </설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/조국통일범민족연합"/>
+    <rdfs:label>역사의 새로운 장을 열 위대한 국민</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35301</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <발신자>박용길</발신자>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/박원순">
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <설명>문익환의 담당 변호사, 인권변호사, 정치인.</설명>
+        <직업>변호사, 정치인</직업>
+        <생몰년도>19550211~20200709</생몰년도>
+        <rdfs:label>박원순</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <생산일>19900308</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <생산자>문익환</생산자>
+    <발신자>박원순</발신자>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시편_성서번역_미완성최종본">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/하느님과신앙"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/곽노순"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/선종완"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/공동번역성서번역"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <rdfs:label>시편 성서번역 미완성최종본</rdfs:label>
+    <생산자>문익환</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>시편 성서번역 미완성 최종본 (3,4,5부)&#xD;
+대한성서공회의 검수를 위해 원고를 타이핑하고 제본하여 제출함</설명>
+    <생산일>1968~1976</생산일>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/수신자">
+    <rdfs:label>수신자</rdfs:label>
+  </owl:AnnotationProperty>
+  <단체 rdf:about="http://example.org/MIH_O/민주통일국민회의">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <다른이름>국민회의</다른이름>
+    <설명>1970년대의 국민연합과 같이 재야 민주인사를 중심으로 효과적인 반독재투쟁을 전개하기 위해 국민적 대표성이 강한 연대조직올 결성. 민민협(민중민주운동협의회)의 결성에 따른 자극과 함께, 확대되어 가는 반독재투쟁올 더욱 발전시키기 위해 정치투쟁에세 국민적 선전력이 높은 부분의 적극적인 역할이 요청되고 있 다는 실천적 인식을 바탕으로 국민회의 결성. 1년 후에 민민협과 통합하여 민통련으로 발전.</설명>
+    <존립기간>19841019~19850329	&#xD;
+</존립기간>
+    <rdfs:label>국민회의</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/죽기까지_빚장이인_삶">
+    <발신자>문익환</발신자>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <생산일>19861107</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+    <설명>네번째 수감 중. 캐나다에서 투병중인 여동생 선희와 조카 문규/영규에게 쓴 격려의 편지&#xD;
+&#xD;
+"선희야,&#xD;
+사랑하는 선희야. 나는 너와 남매로 인연이 맺어져서 서로 잊지 못하고 마음으로, 그리고 위해서 기도하는 사이가 되었다는 일이 그냥 신비요 고마움이다. ..."</설명>
+    <rdfs:label>죽기까지 빚장이인 삶</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35138	</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문선희"/>
+    <수신자>문선희</수신자>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/새로쓴_기독교민족통일운동사_붓글씨_연습본">
+    <rdfs:label>새로쓴 기독교민족통일운동사 붓글씨 연습본</rdfs:label>
+    <생산자>문익환	</생산자>
+    <설명>새로쓴 익환 목사가 단행본의 표지인 새로쓴 기독교민족통일운동사의 글씨를 보고 적어낸 붓글씨 연습본</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전쟁당시_판문점_풍경">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/정전회담"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <생산일>1950년대</생산일>
+    <rdfs:label>전쟁당시 판문점 풍경</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <형태소재>컬러 슬라이드 필름	 사진	</형태소재>
+    <설명>문익환이 찍은 판문점 풍경. 길과 트럭들, 컬러 슬라이드 사진</설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36311	</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/셋째_문의근_백일사진">
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <생산일>19500615</생산일>
+    <rdfs:label>셋째 문의근 백일사진</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문의근"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <문익환기록물_장소>
+      <장소 rdf:about="http://example.org/MIH_O/서울_운니동">
+        <장소_인물 rdf:resource="http://example.org/MIH_O/박두환"/>
+        <장소_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <설명>박용길이 서울에서 유학하며 조부와 함께 지내던 곳</설명>
+        <rdfs:label>서울 운니동</rdfs:label>
+      </장소>
+    </문익환기록물_장소>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>박승희 할아버지와 찍은 셋째 의근의 백일 사진 1950.6.15</설명>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/통일연대공동준비위원">
+    <주요활동>2000.6.15 남북공동선언 실현을 위한 모임</주요활동>
+    <설명>준비위원장 박용길(2001)</설명>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>통일연대공동준비위원</rdfs:label>
+  </단체>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/다른이름">
+    <rdfs:label>다른이름</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/사건"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/단체"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/인물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/장소"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/고동색_외출용_수의">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <형태소재>의류</형태소재>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>고동색 수의</rdfs:label>
+    <생산일>19771231</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/전주교도소"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36277</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <설명>3.1민주구국선언 사건으로 수감되었다가 석방될 때 입었던 수의 1977. 12. 31. 평상시 입는 옷이 아니라 외출할 때 입는 짙은 고동색 수의. 수인번호 6943</설명>
+    <생산자>대한민국법무부</생산자>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/장준하_영정">
+    <생산일>19750821</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <설명>1975.8.21 치러진 장례식에서 가져온 장준하의 영정. 당시 한창 몰두하던 성서번역하는 방에 두었다. 현재 통일의 집 박물관에 전시돼 있다.&#xD;
+"문익환은 장준하의 관을 땅 속에 내리면서 약속했다. 그의 죽음을 땅에 묻어서는 안 된다! 그래, 네가 하려다 못한 일을 내가 해주마!&#xD;
+돌아오는 길에 문익환은 장준하의 모습이 생생한 영정을 자신의 방에 걸어둘 생각으로 껴안고 왔다. 그때 장지에서 돌아오는 버스에서 백기완이 문익환에게 말했다.&#xD;
+'이제 문 선생님이 장준하 영감의 대타로 나서주지 않겠습니까?'" (문익환 평전)&#xD;
+</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/장준하"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <rdfs:label>장준하 영정 액자</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/통일의집"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/제주도_피난시절_아이들">
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문호근"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문의근"/>
+    <설명>제주도 피난 시절 세 자녀. 가운데 영금, 호근, 의근</설명>
+    <생산일>19510000</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/제주"/>
+    <rdfs:label>제주도 피난시절 아이들</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문영금"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/설명">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/사건"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/인물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/장소"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/주제"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/단체"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label>설명</rdfs:label>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/정전회담_통역관_시절_문익환과_박용길">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>정전회담 통역관 시절 문익환과 박용길, 창경궁 1950년대 초 </설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <생산일>1950~1953	</생산일>
+    <rdfs:label>정전회담 통역관 시절 문익환과 박용길</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/개인의_승리가_아닌_민족의_승리">
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/유원호"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35183</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/김신묵"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <rdfs:label>개인의 승리가 아닌 민족의 승리</rdfs:label>
+    <생산자>문익환	</생산자>
+    <수신자>김신묵	</수신자>
+    <설명>다섯번째 감옥. 방북사건의 첫 재판을 끝내고 느낀 소감과 수행원이었던 유원호 선생에 대한 고마움을 표현. &#xD;
+"오늘 법정에 같이 앉아서야 유원호 선생이 누구인 줄을 알게 되었습니다. 그는 정치인입니다. 정치인의 사명으로 투철하게 사는 사람입니다. 새 기계들이 들어와서 이제 사업이 궤도에 막 오르려는 순간이었습니다. 그런데 그는 그걸 내팽개치고 너의 수행원으로 북에 갔다 왔습니다. 겸허하게도 나의 수행원으로 분단의 장벽을 깨는 데 한몫하겠다는 정치인다운 사명, 그것이 이제 막 궤도에 오를 사업을 초개처럼 여기게 했습니다. 오늘도 그가 말했지만, 그는 이 역사적인 여행에 동참하게 된 걸 영광이라고 생각하고 있습니다. "</설명>
+    <생산일>19890626</생산일>
+    <쪽수>2</쪽수>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시_비무장지대_붓글씨">
+    <rdfs:label>시 비무장지대 붓글씨</rdfs:label>
+    <설명>문익환 목사의 시 &lt;비무장지대&gt;를 박용길 장로가 쓴 붓글씨. 비무장지대가 상징하는 통일과 평화를 강조하고 이를 높이 평가하는 내용&#xD;
+&#xD;
+</설명>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57170</URL>
+    <생산자>박용길</생산자>
+    <생산자>문익환</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/식별자">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/문익환기록물"/>
+    <rdfs:label>식별자</rdfs:label>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/만주_만보산_교회_앞에서_신혼시절">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/학병거부">
+        <rdfs:label>학병거부</rdfs:label>
+        <설명>일본신학교 유학 중 학병 징집 소식이 들리자 문동환과 봉천신학교로 전학을 신청하여 일본을 탈출한 사건.</설명>
+        <발생연도>19430400</발생연도>
+        <사건_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+      </사건>
+    </문익환기록물_사건>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_신경"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <생산일>1944~1945</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>만주 만보산 교회 앞에서 신혼시절</rdfs:label>
+    <설명>학병거부로 일본신학교에서 만주 봉천신학교로 전학한 뒤 며칠만에 학교를 관두고 오지 만보산 교회 전도사로 부임. 결혼 후 만주 만보산 교회 앞에서 왼쪽부터 문익환, 박용길, 문동환-1944~1945년 겨울&#xD;
+</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/만보산교회"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문재린_목사_토론토_임마뉴엘_칼리지_신학학사졸업장">
+    <rdfs:label>문재린 목사 토론토 임마뉴엘 칼리지 신학학사졸업장</rdfs:label>
+    <다른이름>문재린 목사가 1932년 토론토 임마뉴엘 칼리지 시험에 통과했다는 사실을 알려주는 졸업장&#xD;
+</다른이름>
+    <생산일>19320000</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/남누리_북누리_한누리되도록_붓글씨">
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/조국통일범민족연합"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>통일언론의 기수 한대신문 34돌을 맞아 문익환이 쓴 글씨</설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/통일의집"/>
+    <rdfs:label>남누리북누리 한누리되도록 붓글씨</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36257</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>19930501</생산일>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/한신대"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/순교여교역자_책자">
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <쪽수>61</쪽수>
+    <생산일>19750501</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/하느님과신앙"/>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/순교자기념사업회">
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <설명>요코하마신학교 및 다른 신학교 동창회와 함께 설립된 (여자)순교자 기념단체</설명>
+        <rdfs:label>순교자기념사업회</rdfs:label>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/도서간행물류"/>
+    <생산자>순교자기념사업회</생산자>
+    <rdfs:label>순교여교역자 책자</rdfs:label>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/요코하마공립여자신학교">
+        <단체_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+        <설명>박용길이 신학 유학을 한 일본의 대학교. 공덕귀(후에 윤보선과 결혼)와는 동창이자 절친하게 지낸 사이이다. 요코하마공립여자신학교 출신으로 순교자들이 다수 배출되었는데 김경순, 김순호, 백인숙, 장수은, 한의정 등이다. 후에 이들을 기념하기 위해 순교자기념사업회를 만든다. (회장 공덕귀) 이들 중 몇이 건강문제로 문익환과의 결혼을 망설일 때 결혼설득 편지를 쓰기도 했다. "박용길은 1937년 3월 경기여고를 졸업하고 곧장 요코하마 여자신학교로 유학을 온 열여덟 살의 앳된 처녀였다." "신학의 참맛은 아직 모르지만, 박용길은 성적이 우수하고 글씨도 잘 썼으며 성격이 명랑하고 쾌활했다. 그런가 하면 공덕귀는 신앙심이 견실하고 리더의 자질을 가진 과년한 숙녀였다."(문익환 평전)&#xD;
+</설명>   <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <rdfs:label>요코하마신학교</rdfs:label>
+      </단체>
+    </문익환기록물_단체>
+    <설명>박용길이 활동했던 순교자기념사업회(회장 공덕귀)에서 해방후 북에서 순교한 여교역자들을 기려 만든 책자(13*19 )김정순, 김순호, 백인숙, 장수은, 한의정 등을 소개하는데 이중 김경순, 김순호, 백인숙, 한의정은 박용길과 요코하마 공립여자신학교의 동창이다.</설명>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/체류기간">
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/장소"/>
+    <rdfs:label>체류기간</rdfs:label>
+  </owl:AnnotationProperty>
+  <단체 rdf:about="http://example.org/MIH_O/관동조선신학생회">
+    <rdfs:label>관동조선신학생회</rdfs:label>
+    <주요활동>예배, 친교, 봉사</주요활동>
+    <단체_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <설명>도쿄 지역의 남녀 신학생들이 봄, 가을에 한 번씩 만나서 예배도 드리고 세상살이에 대한 이야기도 나누는 모임(김형수, 문익환 평전, 2018). 1939년 4월 24일 요코하마에서 열린 봄 모임에서 문익환과 박용길이 처음 만남</설명>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/신구약_공동번역_성경이_출판되다">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+    <생산자>문익환</생산자>
+    <수신자>박용길</수신자>
+    <설명>7년간 종사하였으나 수감으로 인해 마무리를 못한 성경 (신구교 공동 번역)이 출판되어 옥중에서 책을 받아 보았다.&#xD;
+주기도 강해 집필 요청을 받았다. &#xD;
+꿈에서 본 환상을 소재로 소설을 쓰고 싶다.&#xD;
+(원본은 유실되고 전집에 실린 내용만 있음)</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>신구약 공동번역 성경이 출판되다</rdfs:label>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문치정_묘비_탁본">
+    <rdfs:label>문치정 묘비 탁본</rdfs:label>
+    <설명>문재린 목사의 아버지 문치정의 묘비문 글씨 탁본</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_생일축하_방명록_액자">
+    <rdfs:label>문익환 목사 생일축하 방명록 액자</rdfs:label>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57195</URL>
+    <설명>문익환 목사의 칠순생일(1987.6.1)축하 롤링페이퍼가 들어가 있는 액자. 생일을 축하하는 사람들의 이름과 작성시기가 적혀 있음. 축하회는 1987.5.28에 기독교회관에서 열렸다. </설명>
+    <URL>https://archives.kdemo.or.kr/isad/view/00950239</URL>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <생산일>19870528</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/시편_성서번역_초고본">
+    <rdfs:label>시편 성서번역 초고본</rdfs:label>
+    <설명>문익환 목사가 시편을 번역하여 원고지에 작성한 초고로 135,136,146,147,148편만 남아있음</설명>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <생산일>1968~1976</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/하느님과신앙"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/유엔군_참전_미국신문기사_스크랩">
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <생산자>박용길	</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/프린스턴신학교"/>
+    <rdfs:label>유엔군 참전 미국신문기사 스크랩</rdfs:label>
+    <설명>문익환이 미국에 공부하러 간 동안 박용길이 기록한 딸 영금의 육아일기. 문익환이 유엔군으로 참전했다는 미국신문 스크랩 포함됨.&#xD;
+미국 지역신문에 실린 문익환 참전에 관한 기사&#xD;
+프린스턴 신학교에서 유엔군으로 자원입대하여 미군의 통역관으로 일하고 있는 문익환과 가족의 소식을 소개하고 있다. 이때 문익환 일가는 공산당의 박해를 피해 만주에서 내려왔기에 반공의식이 투철했으며 친미적인 성향을 가지고 있었다. 박용길이 기록한 문영금 육아일기 중 1950</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36267</URL>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/자주평화통일민족회">
+    <단체_문익환기록물 rdf:resource="http://example.org/MIH_O/월간_말_1995년_9월표지_판문점을_넘어오는_박용길"/>
+    <단체_사건 rdf:resource="http://example.org/MIH_O/박용길방북"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>상임고문 박용길(1994)</설명>
+    <rdfs:label>자주평화통일민족회</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/석방된_문익환과_박용길_포옹사진">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <설명>박정희 대통령 사망, 긴급조치 해제로 두번째 수감에서 석방(1979.12.8 자정)되어 집에 돌아온 문익환 목사. 현관에서 박용길과 반가움의 포옹을 하고 환하게 웃고 있다.  </설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <생산일>19791208</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/통일의집"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/수유동"/>
+    <rdfs:label>석방된 문익환과 박용길 포옹사진</rdfs:label>
+    <생산자>권주훈</생산자>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/두번째구속"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/갈릴리교회_주보">
+    <rdfs:label>갈릴리교회 주보</rdfs:label>
+    <생산자>문익환	</생산자>
+    <생산자>박용길	</생산자>
+    <생산일>19830403</생산일>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/갈릴리교회"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <설명>문익환과 박용길이 함께 반든 갈릴리교회 주보-8(1983.4.3) 부활주일예배 순서 및 소식이 손글씨로 적혀있다. 양십수들을 위한 양심수 가족들의 모임 갈릴리교회. 이날 설교는 문익환 목사이다. </설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/아름다운_꽃을_피우고_맛있는_열매를_맺는_생명">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/여섯번째구속"/>
+    <수신자>박용길</수신자>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <생산일>19911010</생산일>
+    <rdfs:label>아름다운 꽃을 피우고 맛있는 열매를 맺는 생명</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안동교도소"/>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/생명과몸">
+        <주제_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/지하의_시집을_읽다가">
+            <rdfs:label>지하의 시집을 읽다가</rdfs:label>
+            <설명>아카이브 제목-감옥은 생명의 소중함을 깨닫게 해주는 곳. &#xD;
+네벗째 구속 중 1986.10.16. 의 편지. 김지하의 시집을 읽고 생명 사랑에 대한 생각을 표현 &#xD;
+"원주에서 내가 주었던 충고를 다시 주고 싶어요. '지하! 국토가 농약과 화학 비료로 죽어 가는 걸 가슴 아파하게. 그러면 지하의 몸도 국토인데, 그 국토가 화학주로 죽어 가게 해서는 안 되지 않겠어.'&#xD;
+&#xD;
+어제 편지와 오늘 편지를 지하에게 보내 주구려. 그동안 나의 책, 시집을 한 권도 지하에게 보내 주지 못했는데, 보내 주면서. 난 지하의 서재에 들어가 보고 이 친구는 남의 책을 별로 읽을 필요가 없는 친구구나 하는 생각이 들었거든요. 지하! 건강해야 한다구. "</설명>
+            <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/민주통일민중운동연합"/>
+            <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35120</URL>
+            <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+            <문익환기록물_인물>
+              <인물 rdf:about="http://example.org/MIH_O/김지하">
+                <생몰년도>19410204~20220508</생몰년도>
+                <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+                <직업>시인</직업>
+                <다른이름>김영일</다른이름>
+                <주요활동>1969 시 '서울길'로 문단 데뷔&#xD;
+1970 오적사건 반공법 위반으로 투옥&#xD;
+1981 세계시인대회 위대한 시인상&#xD;
+브루노 크라이스키상 수상 1993 제5회 이상문학상 수상</주요활동>
+                <설명>시인(본명 영일). 문익환과 뜻을 같이한 동지.&#xD;
+문익환은 김지하의 작품을 높게 평가하고 교류를 가졌으며 가족들간의 교류도 활발했음.</설명>
+                <rdfs:label>김지하</rdfs:label>
+              </인물>
+            </문익환기록물_인물>
+            <생산일>19861016</생산일>
+            <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/네번째구속"/>
+          </문익환기록물>
+        </주제_문익환기록물>
+        <rdfs:label>생명과몸</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <설명>여섯번째 수감. 제56신. 사람 몸의 기관이 움직이는 것이 민주주의의 원리와 같고, 몸과 마음이 조화를 이루어야 한다는 생각을 표현</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=41435</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/명동학교_여동창회">
+    <rdfs:label>명동학교 여동창회</rdfs:label>
+    <설명>명동학교 여동창회 단체사진	- 둘째줄 왼쪽에서 두번째 어머니 김신묵 - 1929년</설명>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/명동소학교"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/김신묵"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+    <생산일>19290427	</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/갈릴리교회_감사헌금봉투">
+    <rdfs:label>갈릴리교회 감사 헌금봉투</rdfs:label>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/갈릴리교회"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>박용길이 직접 만든 갈릴리교회 헌금 봉투. 문익환 목사가 주장한 한글 풀어쓰기로 '가ㄹ리ㄹ리'라 쓰여있다.</설명>
+    <생산일>1980년대</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/박용길_장로가_유관우에게_보낸_붓글씨">
+    <rdfs:label>박용길 장로가 유관우에게 보낸 붓글씨</rdfs:label>
+    <생산자>박용길</생산자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/유관우">
+        <rdfs:label>유관우</rdfs:label>
+        <인물_단체>
+          <단체 rdf:about="http://example.org/MIH_O/복음동지회">
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/장준하"/>
+            <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+            <단체_인물>
+              <인물 rdf:about="http://example.org/MIH_O/김관석">
+                <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+                <설명>문익환의 친구, 민주화운동 동지, 목사로서 1960년대 후반부터 "반독재 지성인 그룹" 활동.&#xD;
+</설명>           <주요활동>1945 YMCA 반탁운동 관련 투옥, 1980 기독교방송 사장</주요활동>
+                <직업>목사</직업>
+                <rdfs:label>김관석</rdfs:label>
+              </인물>
+            </단체_인물>
+            <설명>1948 '임마누엘단' 창립총회 (전시에 일시 활동 중단) &#xD;
+복음동지회는 1956년에서 1959년까지 장윤철, 장준하, 전경연, 김덕준, 홍태헌, 백이언, 김정준, 전택완, 이호운, 윤성범, 이병섭, 유동식, 유재선, 서남동, 박대선, 김용옥, 이재면, 고영춘, 김찬국, 조선출, 이여진, 박창환, 김하태, 이장식, 문희상, 지원용 등 각 교파 신학교의 중견신학자들이 망라된 단체인데, 다달이 월례회와 회보 발행을 하면서도 회칙도 회장도 없는 무두회(無頭會)로 자원봉사단의 체제로 운영되고 있었다. (문익환 평전)&#xD;
+한편 1957년부터 성서 번역을 시작하여 1961년 『새로 옮긴 신약성서 1. 마태의 복음서』라는 이름으로 마태복음이 출판되었는데, 이는 국내 신학자들의 노력에 의한 최초의 번역서였다.&#xD;
+[출처: 한국민족문화대백과사전(복음동지회(福音同志會))]&#xD;
+문익환은 이때의 경험으로 1968년 공동번역 성서의 구약번역 책임위원을 맡는다.&#xD;
+</설명>       <rdfs:label>복음동지회</rdfs:label>
+            <단체_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+            <URL>https://www.hani.co.kr/arti/PRINT/302958.html</URL>
+            <존립기간>1948~?</존립기간>
+          </단체>
+        </인물_단체>
+        <생몰년도>19??~19811114</생몰년도>
+        <설명>문익환의 친구로서 복음동지회 동지. 용산제일교회 장로.&#xD;
+1981.11.27 박용길이 문익환에게 보낸 편지에 추모 기사를 동봉함 https://archives.kdemo.or.kr/isad/view/00952142</설명>
+      </인물>
+    </문익환기록물_인물>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/양복_복장의_문익환_목사_사진액자">
+    <rdfs:label>양복 복장의 문익환 목사 사진액자</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <생산일>1950년대</생산일>
+    <설명>외국도시 전경을 배경으로 양복 차림의 문익환 목사의 사진을 넣어놓은 사진액자 1950년대</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/가족이_기록한_문익환목사_면회록">
+    <rdfs:label>가족이 기록한 문익환목사 면회록</rdfs:label>
+    <설명>문익환 목사를 면회 할때 마다 날짜와 나눈 대화를 기록한 면회록</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47730</URL>
+    <생산자>박용길	</생산자>
+    <생산일>19820000</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+  </문익환기록물>
+  <장소 rdf:about="http://example.org/MIH_O/영등포교도소">
+    <rdfs:label>영등포교도소</rdfs:label>
+    <설명>서울남부교도소(서울南部矯導所)는 서울특별시 구로구 천왕동에 있는 대한민국의 교도소이다. 1968년부터 2011년까지는 영등포교도소라는 이름으로 불리다가, 2011년 현 위치로 이전하면서 명칭이 변경되었다.</설명>
+  </장소>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/해바라기가_싫다니_하는_수_없지요">
+    <설명>해바라기 꿈을 꾸기도 했고, 접견장에서 본 아내의 웃음이 해바라기를 닮기도 하여 애칭을 코스모스에서 해바라기로 바꾸고 싶었으나 아내의 반대로 그러지 못했다는 내용의 편지. </설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <형태소재>봉함엽서</형태소재>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <생산일>19900226</생산일>
+    <발신주소>안양 교도소</발신주소>
+    <rdfs:label>해바라기가 싫다니 하는 수 없지요</rdfs:label>
+    <쪽수>2</쪽수>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <수신주소>서울 도봉구 수유동</수신주소>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+  </문익환기록물>
+  <관계 rdf:about="http://example.org/MIH_O/문익환의부모">
+    <rdfs:label>문익환의부모</rdfs:label>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <관계_인물 rdf:resource="http://example.org/MIH_O/김신묵"/>
+  </관계>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/내_가슴에_안겨_우는_기완이_누님">
+    <rdfs:label>내 가슴에 안겨 우는 기완이 누님</rdfs:label>
+    <생산자>문익환</생산자>
+    <생산일>19890609	</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/백기완">
+        <인물_단체 rdf:resource="http://example.org/MIH_O/민주통일민중운동연합"/>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+        <설명>문익환의 친구, 민주화운동 동지, 정치인.&#xD;
+장준하의 장례식 후 장지에서 돌아오는 버스에서 백기완이 문익환에게 장준하의 대타로 나서달라는 요청을 한 일화가 있음. &#xD;
+&lt;사랑도 명예도 이름도 남김없이&gt; 시는 황석영의 편집으로 &lt;임을 위한 행진곡&gt;의 가사가 됨</설명>
+        <주요활동>1975 장준하 장례식 주관, 1979 YMCA 위장결혼식 사건, 1983 민통련 부의장, 1988 통일문제연구소 소장 1992 민중후보로 대통령선거 출마</주요활동>
+        <직업>시문학가, 소설과, 통일운동가, 정치인</직업>
+        <생몰년도>19320124~20210215</생몰년도>
+        <rdfs:label>백기완</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35177</URL>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <수신자>백기완</수신자>
+    <설명>다섯번째 수감. 백기완의 누이를 평양가서 만난 얘기와 공소장을 받았다는 얘기</설명>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/전국민족민주운동연합">
+        <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+        <단체_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+        <rdfs:label>전국민족민주운동연합</rdfs:label>
+        <존립기간>19890121~19911200	</존립기간>
+        <다른이름>민주주의민족통일전국연합</다른이름>
+        <다른이름>전민련</다른이름>
+        <다른이름>민주통일민중운동연합</다른이름>
+        <설명>이전명칭: 민주통일민중운동연합&#xD;
+상임고문: 문익환&#xD;
+노동자， 농민 등 8 개 부문단체와 전국 12 개 지역단체 연합으로 결성， 260 여개의 개별단체를 망라한 해방 이후 최대 규모의 민족민주운동연합체이다. 민중이 주체가 되어 민족의 자주화와 통일， 민주주의의 실현을 지향하였다. &#xD;
+조직의 옥표는 민중해방과 진정한 자유 ·평동 사회의 실현으로， 이를 위한 당면과제로서 반외세자주화 ·반독재민주화 ·조국통일을 설정하였다.&#xD;
+합법정당의 건설올 위해 이부영(李富榮) 둥이 탈퇴하고， 강기훈 유서대필사건 동 정권의 탄압으로 조직 역량이 약화되었다. 1991 년 12월 민주주의민족통일전국연합(약칭 전국연합)이 결성되면서 해체되었다. </설명>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/서울중앙교회">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>중앙교회</rdfs:label>
+    <단체_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <다른이름>한빛교회</다른이름>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <설명>아버지는 전후 시대에 온통 강원도 일대를 순회하면서 교회를 신설하는 일에 전력을 퍼부었다. 강원도는 함경도에 접경한 지역으로 피난민도 많고, 또 캐나다 선교부가 관심을 가져야 할 지역이어서 선교부의 후원으로 여러 교회를 설립하였다. 홍천읍 교회, 춘천 신평동 교회, 춘천 교동교회, 신포리 교회, 화천읍 교회, 신사리 교회……. 그 와중에서 경동교회에 나가다가 독립한 교회가 중앙교회였고, 중앙교회가 이름을 바꾼 것이 한빛교회였다. 문익환은 그 한빛교회의 목사가 되었다. (문익환 평전)</설명>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/털실_귀마개">
+    <rdfs:label>털실 귀마개</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/전주교도소"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36278</URL>
+    <생산일>1970~1980년대</생산일>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>난방이 되지 않았던 감옥에서 겨울을 보내야 하는&#xD;
+남편을 위해 박용길이 직접 만든 쑥색 귀마개 아래쪽에 고무줄이 달려있다. 1970-80년대, 털실 귀마개</설명>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/두번째구속"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_프린스턴_대학교_석사_학위증_액자">
+    <rdfs:label>문익환 목사 프린스턴 대학교 석사 학위증 액자</rdfs:label>
+    <설명>문익환 목사 프린스턴 대학교 석사 학위증 액자</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/미국_프린스턴"/>
+    <다른이름 rdf:resource="http://example.org/MIH_O/생산일"/>
+    <생산일>19540000</생산일>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/프린스턴신학교"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/박용길의_연애편지">
+    <수신자>문익환</수신자>
+    <설명>박용길이 문익환에게 쓴 연애편지(1941.04.26) 문익환이 박용길로 부터 받은 전보를 헤어지자는 줄 오해하여 그동안 받은 편지를 다 태워버려서 한 통만 남아있음.</설명>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <쪽수>3</쪽수>
+    <생산일>19410426</생산일>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47752</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>박용길의_연애편지</rdfs:label>
+    <문익환기록물_단체>
+      <단체 rdf:about="http://example.org/MIH_O/승동교회">
+        <설명>박용길이 일본에서 돌아와 1941년 서울에서 전도사로 활동하던 교회. 그때 문익환은 일본 신학교에 유학 중이었다가 폐병으로 금강산에서 6개월간 휴양하기도 했다.</설명>
+        <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+        <rdfs:label></rdfs:label>
+      </단체>
+    </문익환기록물_단체>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울_운니동"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/성서_번역_책상_재연">
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/대한성서공회_구약공동번역위원회"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/공동번역성서번역"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산일>1970년대</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/수유동"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/선종완"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/곽노순"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/하느님과신앙"/>
+    <rdfs:label>성서 번역 책상 재연</rdfs:label>
+    <설명>성서번역을 하시던 책상을 재연해 놓은 전시</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36327</URL>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/통역병_시절의_문익환">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>정전회담(휴전회담) 통역관으로 분단의 현장을 지켜보았던 문익환. 판문점에서 군복입고 찍은 사진. 뒤에 유엔군 보초병이 보인다.</설명>
+    <생산일>1950~1953	</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/정전회담"/>
+    <rdfs:label>통역병 시절의 문익환</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/유엔군"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전쟁_중_구호활동하는_원광회">
+    <rdfs:label>전쟁 중 구호활동하는 원광회</rdfs:label>
+    <설명>박용길의 모교 경기여고 동창 모임에서 조직한 원광회가 전쟁 후 구호사업을 하는 사진</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <생산일>1950년대</생산일>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/발생연도">
+    <rdfs:label>발생연도</rdfs:label>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_박용길의_거제도_해수욕_사진">
+    <rdfs:label>문익환 박용길의 거제도 해수욕 사진</rdfs:label>
+    <설명>오랜만에 가족이 거제도 바닷가로 해수욕을 가서 찍은 부부의 사진	</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산일>1950</생산일>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/시나가와品川교회">
+    <설명>1940년 일본신학교 유학시절 문익환이 봉사하던 교회. 마침 박용길은 일본신학교 지나고 시나가와 교회에서 전도사일을 하기로 되어 있었다. </설명>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <rdfs:label>시나가와교회</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환이_박용길에게_사용한_호칭목록">
+    <rdfs:label>문익환이 박용길에게 사용한 호칭목록</rdfs:label>
+    <생산자>박용길	</생산자>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47755	</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산일>1990년대	</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/전쟁_중_보낸_항공우편_봉투">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <rdfs:label>전쟁 중 보낸 항공우편 봉투</rdfs:label>
+    <설명>전쟁 중 문익환이 박용길에게 보낸 편지 봉투들.&#xD;
+졔주도 서부교회와 부산의 구흥남 형부 집으로 보내졌다. 봉투에 박용길은 아이들을 데리고 남편이 있는 일본으로 가기 위해 한인교회 전도사로 수속하려한다고 적혀있다.&#xD;
+1951~1952</설명>
+    <생산일>1951~1952	</생산일>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/제주"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36274</URL>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문재린_캐나다_유학_전_기념사진">
+    <rdfs:label>문재린 캐나다 유학 전 기념사진</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <생산일>19280900</생산일>
+    <설명>문재린 캐나다 신학유학 가기전 기념사진&#xD;
+앞줄 가운데 문재린, 왼쪽 정재면, 뒷줄 왼쪽에서 첫번째 이권찬, 두번째 동생 문학린</설명>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/명동소학교"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_명동"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/한글_풀어쓰기와_철자법의_간소화">
+    <생산자>문익환</생산자>
+    <rdfs:label>한글 풀어쓰기와 철자법의 간소화</rdfs:label>
+    <생산일>19920427</생산일>
+    <수신자>문성근</수신자>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_주제>
+      <주제 rdf:about="http://example.org/MIH_O/언어와우리말">
+        <주제_문익환기록물>
+          <문익환기록물 rdf:about="http://example.org/MIH_O/이오덕_민족과_역사를_믿는_데서_오는_담담함">
+            <문익환기록물_인물>
+              <인물 rdf:about="http://example.org/MIH_O/이오덕">
+                <인물_문익환기록물 rdf:resource="http://example.org/MIH_O/이오덕_민족과_역사를_믿는_데서_오는_담담함"/>
+                <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친우"/>
+                <직업>아동문학가, 교육자</직업>
+                <설명>한글 사랑과 작품 등 감수성을 교류하던 문익환의 친구, 작가, 아동문학가.&#xD;
+문익환의 시 '잠꼬대 아닌 잠꼬대'에 대해 과연 시대 안에서 살아 있는 ‘가장 깨끗한 우리말로 쓴 걸작’이라 평한 일화가 있음.&#xD;
+&#xD;
+[김형수. 2018. 『문익환 평전』. 파주: 다산책방, p. 550]</설명>
+                <생몰년도>19251114~20030825</생몰년도>
+                <rdfs:label>이오덕</rdfs:label>
+              </인물>
+            </문익환기록물_인물>
+            <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문성근"/>
+            <수신자>이오덕</수신자>
+            <설명>다섯번째 수감. 『이오덕 교육 일기』책을 보내 주신 것을 감사하며 그 분의 업적을 치하</설명>
+            <수신자>박용길</수신자>
+            <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35190	</URL>
+            <생산일>19890711</생산일>
+            <생산자>문익환</생산자>
+            <rdfs:label>이오덕 민족과 역사를 믿는 데서 오는 담담함</rdfs:label>
+            <수신주소>서울시 수유동 박용길</수신주소>
+            <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+            <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+          </문익환기록물>
+        </주제_문익환기록물>
+        <rdfs:label>언어와우리말</rdfs:label>
+      </주제>
+    </문익환기록물_주제>
+    <설명>여섯번째 수감. 제192신. 한글 풀어쓰기는 기계화를 쉽게 하는 면도 있고, 철자법을 간소하게 하여 겨레의 계층화를 완화할 수 있다는 생각을 표현</설명>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=41568</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안동교도소"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/여섯번째구속"/>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/미군들과_시가_피우는_사진">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/유엔군입대"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/판문점"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <rdfs:label>미군들과 시가 피우는 사진</rdfs:label>
+    <생산일>19500000	</생산일>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36295</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <설명>미군들과 시가를 피우는 문익환</설명>
+  </문익환기록물>
+  <인물 rdf:about="http://example.org/MIH_O/기세춘">
+    <다른이름>묵점</다른이름>
+    <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의동료"/>
+    <설명>재야운동가, 한학자.&#xD;
+문익환의 학문적 동지로서 "예수와 묵자" 공동 집필. 1963년 동학혁명연구회 발족, 학술위원장 신영복과 함께 통일혁명당 사건에 연루돼 투옥</설명>
+    <직업>재야운동가, 한학자</직업>
+    <주요활동>묵자 국내 최초 완역</주요활동>
+    <생몰년도>19370000~20220206</생몰년도>
+    <rdfs:label>기세춘</rdfs:label>
+  </인물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/문익환_목사_모임_사진액자">
+    <rdfs:label>문익환 목사 모임 사진액자</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서울"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=57182</URL>
+    <설명>문익환 목사가 모임에서 계훈제, 이영희, 송건호, 박현규, 고은, 박정기 등과 찍은 사진을 넣어놓은 사진액자</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/갈대피리의_가락">
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <생산일>19760422	</생산일>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47761</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <설명>김상진 열사 등을 생각하며 문익환 목사가 지은 시를 박용길이 그림과 글씨로 표현한 시화 작품. 2019년 김겸 연구소에서 보존처리하여 액자에 넣었다.			</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산자>박용길	</생산자>
+    <rdfs:label>갈대피리의 가락</rdfs:label>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/늦봄_故_문익환_목사님_겨레장에_부쳐">
+    <생산자>김영환</생산자>
+    <설명>김영환이 쓴 조시 &lt;우리가 늦봄이 될께요&gt;</설명>
+    <rdfs:label>늦봄 故 문익환 목사님 겨레장에 부쳐</rdfs:label>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_사건>
+      <사건 rdf:about="http://example.org/MIH_O/문익환사망">
+        <발생연도>19940118</발생연도>
+        <rdfs:label>문익환사망</rdfs:label>
+      </사건>
+    </문익환기록물_사건>
+    <생산일>19940100</생산일>
+    <쪽수>5</쪽수>
+  </문익환기록물>
+  <장소 rdf:about="http://example.org/MIH_O/육군교도소">
+    <rdfs:label>육군교도소</rdfs:label>
+    <장소_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+  </장소>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/활동단체">
+    <rdfs:label>활동단체</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/발신자">
+    <rdfs:label>발신자</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/존립기간">
+    <rdfs:label>존립기간</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/단체"/>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/난_발바닥으로_시">
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=47704</URL>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <생산일>19900000</생산일>
+    <설명>문익환 시 '난 발바닥으로'를 양충모 작가가 쓴 시, 이 시에 영감을 받아 제작한 발바닥 작품과 함께 전시. 작가가 작품을 만들게 된 계기가 추가적으로 적혀있다. </설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>난 발바닥으로 시</rdfs:label>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/세번째구속"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/문서류"/>
+    <생산자>양충모</생산자>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/서부교회">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/김신묵"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문재린"/>
+    <단체_사건 rdf:resource="http://example.org/MIH_O/피난"/>
+    <단체_장소 rdf:resource="http://example.org/MIH_O/제주"/>
+    <rdfs:label>서부교회</rdfs:label>
+  </단체>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/생몰년도">
+    <rdfs:label>생몰년도</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/MIH_O/인물"/>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/도쿄_일본신학교_단체사진">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/학병거부"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <설명>도쿄 일본신학교 1938년 문익환 입학. 1940년 문동환 입학. 첫째줄 왼쪽에서 세번째 문익환. 둘째줄 가운데 문동환</설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/일본"/>
+    <생산일>1940~1943</생산일>
+    <rdfs:label>도쿄 일본신학교 단체사진</rdfs:label>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/도쿄일본신학교"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/민주화실천가족운동협의회">
+    <rdfs:label>민가협</rdfs:label>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <다른이름>민가협</다른이름>
+    <존립기간>19851212~						</존립기간>
+    <설명>굽사독재정권 하에서 청년 학생 노동자 동 민주인사들이 억울하게 쿠금돼 수사기관과 교도소에서 고문퉁으로 심각하게 인권을 유련당하는 것을 사회에 고발하고， 양심수들을 구조하기 위해 가족들이 모임을 결성하여 양심수 석방， 국가보안법 퉁 제반약법 철폐， 고문 추방 및 인권실현， 사회민주화， 민족통일올 위해 노력함.</설명>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/꿈을_비는_마음_붓글씨">
+    <rdfs:label>꿈을 비는 마음 붓글씨</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <설명>문익환 목사의 &lt;꿈을 비는 마음&gt;이라는 시를 박용길 장로가 작성한 붓글씨. 통일과 관련하여 남과 북이 같이 할 수 있는 행사나 만남을 꿈꿔본다는 내용이 적혀있음</설명>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/피로_쓴_통일">
+    <rdfs:label>피로 쓴 통일</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <생산일>미상</생산일>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <설명>통일, 석방 양심수, 철폐 국보법 이라는 문구가 적힌 혈서</설명>
+  </문익환기록물>
+  <단체 rdf:about="http://example.org/MIH_O/봉천신학교">
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <단체_인물 rdf:resource="http://example.org/MIH_O/문동환"/>
+    <단체_사건 rdf:resource="http://example.org/MIH_O/학병거부"/>
+    <설명>일본신학교에서 학병을 피하기 위해 입학한 신학교. 신학적 이견으로 곧 그만두고 오지의 만보산 교회 전도사로 부임</설명>
+    <단체_장소>
+      <장소 rdf:about="http://example.org/MIH_O/북간도_봉천">
+        <다른이름>중국 길림성 장춘현</다른이름>
+        <rdfs:label>북간도 봉천</rdfs:label>
+      </장소>
+    </단체_장소>
+    <rdfs:label>봉천신학교</rdfs:label>
+  </단체>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/첫_편지">
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/민주와자유"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/서대문서울구치소"/>
+    <형태소재>봉함엽서가 아닌 가로줄 편지지</형태소재>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/3.1민주구국선언"/>
+    <생산일>19760411</생산일>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/첫번째구속"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=34969</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <설명>감옥에서 보낸 첫번째 편지로써 건강과 수감생활에 대한 얘기과 아내에 대한 애뜻한 감정을 표현. '정말 정말 보고픈 당신께'로 시작되며 총5장의 편지 중 중간 두장이 분실되었음. </설명>
+    <rdfs:label>첫 편지</rdfs:label>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/남편27세생일카드">
+    <rdfs:label>남편27세생일카드</rdfs:label>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/달님과코스모스"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <형태소재>2면 카드</형태소재>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <설명>1944년 결혼 후 그 이듬해 남편의 생일 축하 카드. 아내 박용길이 달님과 코스모스, 그 사이를 잇는 토끼를 그려 넣었다. 떨어져 축하하는 것이 섭섭하며 하느님의 기뻐하시는 일꾼이 되기를 바란다는 내용.</설명>
+    <쪽수>2</쪽수>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/북간도_신경"/>
+    <생산일>19450601</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/김일성과_포옹하는_컬러사진">
+    <생산일>19890327</생산일>
+    <rdfs:label>김일성과 포옹하는 컬러사진</rdfs:label>
+    <설명>반갑게 포옹하는 문익환과 김일성&#xD;
+1989년 3월 27일</설명>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/김일성"/>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=36259	</URL>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/사진류"/>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/전국민족민주운동연합"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+  </문익환기록물>
+  <owl:AnnotationProperty rdf:about="http://example.org/MIH_O/수신주소">
+    <rdfs:label>수신주소</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://example.org/MIH_O/문익환기록물"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/유형"/>
+          <owl:Class rdf:about="http://example.org/MIH_O/장소"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:AnnotationProperty>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/박용길_장로_붓글씨_너와_나_액자">
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <설명>박용길 장로의 붓글씨를 넣어놓은 액자. 문익환 목사의 시 '나는 가고 너는 와야지'(셋째 시집 난 뒤로 물러설 자리가 없어요1987에 수록)의 마지막 연이 적혀 있음. 낙관 옆에 늦봄 글 봄길 씀이라고 쓰여있음</설명>
+    <rdfs:label>박용길 장로 붓글씨 너와 나 액자</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/통일의집"/>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서화류"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/박용길"/>
+    <생산일>1987이후</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/4.2_공동성명">
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/방북사건"/>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/통일과평화"/>
+    <쪽수>10</쪽수>
+    <문익환기록물_단체 rdf:resource="http://example.org/MIH_O/전국민족민주운동연합"/>
+    <설명>문익환 목사가 서명한 서명한 4.2 공동성명 &#xD;
+성명문에 서명한 남측대표는 전국민족민주운동연합(전민련) 고문 문익환, 북측대표는 조국평화통일위원회 위원장 허담이다.&#xD;
+※ 1989년 문익환 목사가 방북하였을 때 남한과 북한은 '공동 성명' 형식으로 합의문을 발표하였다 </설명>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/평양"/>
+    <문익환기록물_인물 rdf:resource="http://example.org/MIH_O/문익환"/>
+    <rdfs:label>공동성명</rdfs:label>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/박물류"/>
+    <생산자>문익환</생산자>
+    <생산일>19890402</생산일>
+  </문익환기록물>
+  <문익환기록물 rdf:about="http://example.org/MIH_O/장모님_같은_처형">
+    <생산자>문익환</생산자>
+    <문익환기록물_유형 rdf:resource="http://example.org/MIH_O/서신류"/>
+    <rdfs:label>장모님 같은 처형</rdfs:label>
+    <문익환기록물_장소 rdf:resource="http://example.org/MIH_O/안양교도소"/>
+    <수신자>박남길</수신자>
+    <문익환기록물_주제 rdf:resource="http://example.org/MIH_O/가족"/>
+    <URL>https://www.archivecenter.net/tongilhouse/archive/srch/ArchiveNewSrchView.do?i_id=35347	</URL>
+    <문익환기록물_인물>
+      <인물 rdf:about="http://example.org/MIH_O/박남길">
+        <인물_문익환기록물 rdf:resource="http://example.org/MIH_O/장모님_같은_처형"/>
+        <인물_관계 rdf:resource="http://example.org/MIH_O/문익환의친인척"/>
+        <주요활동>1978 퀸즈 YMCA 회장. 1987 저서 「1900년대를 살다」(단행본). 이화여고 교사, 서울여대 교수</주요활동>
+        <설명>문익환의 처형, 박용길의 첫째 언니(둘째 박용애). 문익환의 처형, 지휘자 정명훈의 장모. 문익환은 박용길이 어머니를 일찍 여의어 맏이인 박용길이 장모님 같다고 회고(1990.07.11 옥중편지)&#xD;
+박용길의 문익환에 대한 회고 "경기여고교사 시절에 학교에서 돌아와 보니 손님이 와 있었다. 집안 어른들이 동생을 만나러 온 분이라고 해서 관심을 갖고 봤다. 얼굴이 창백하고 몸이 아주 가느다란 미남이었다. 음성이 얼마나 가늘던지, 어른들은 몸이 저렇게 약한 청년에게 어떻게 딸을 주느냐고 걱정이 태산이었다."(문익환 평전) </설명>
+        <rdfs:label>박남길</rdfs:label>
+      </인물>
+    </문익환기록물_인물>
+    <문익환기록물_사건 rdf:resource="http://example.org/MIH_O/다섯번째구속"/>
+    <생산일>19900711</생산일>
+    <설명>다섯번째 수감. 교도소로 면회 왔다 간 처형에게 사위 정명훈의 파리 오페라단 음악 감독 취임을 축하하며 공연 비디오 테이프를 보내 줄 것을 당부.</설명>
+  </문익환기록물>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
